@@ -1,18 +1,27 @@
 @import './header.scss';
-@import './vite-promo.scss';
+@import './home.scss';
+@import './coocies.scss';
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  --basic-bg: #eae9e5;
+  --light-text: #e7e7e7;
+  --black: #1b1918;
+  --highlighted-bg: #8c6955;
+  --highlighted-stroke: #664a2e;
+  --small-text: #ab9f98;
+  --card-bg: #e5dbc8;
+  --card-stroke: #d4cab8;
+  --without-star: #d0bf9e;
+  --star: #f59e0b;
+  --line: #d2d2cd;
+  --text: #907d72;
+}
+.container {
+  padding: 0 20px;
+  max-width: 320px;
+  margin: 0 auto;
+  @include media(desktop) {
+    padding: 0 180px;
+    max-width: 1200px;
+  }
 }
