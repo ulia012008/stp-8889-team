@@ -1,76 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vanilla-vite-template/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    
-    <script type="module" crossorigin src="/vanilla-vite-template/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/vanilla-vite-template/assets/index-452b352a.css">
-  </head>
-  <body>
-    <header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="/page-2.html" class="nav-link">Page 2</a>
-      </li>
 
-      <li class="nav-item">
-        <a href="/page-3.html" class="nav-link">Page 3</a>
-      </li>
-    </ul>
-    <button type="button" class="burger-btn" data-action="open">Open menu</button>
-    <div class="burger-menu" data-visible="close">
-      <ul>
-        <li><a href="#">link-1</a></li>
-        <li><a href="#">link-2</a></li>
-        <li><a href="#">link-3</a></li>
-        <li><a href="#">link-4</a></li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Explore myths through real-world movement in MythWalker, a geolocation fantasy RPG. Unlock legends, battle threats, and walk the path of heroes.">
+  <meta name="keywords"
+    content="MythWalker, geolocation RPG, myth game, location-based RPG, mobile AR game, fantasy adventure, mythical heroes">
+  <meta name="author" content="MythWalker Team">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fbnaqamedl.xyz">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>""</title>
+  
+  <script type="module" crossorigin src="/vanilla-vite-template/commonHelpers.js"></script>
+  <link rel="stylesheet" href="/vanilla-vite-template/assets/index-927667c3.css">
+</head>
+
+<body>
+  <header class="header">
+  <div class="menu-header container">
+    <img src="../img/header/logo.png" alt="Game logo">
+    <nav class="desk_nav">
+      <ul class="header-ul">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#characters">Characters</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#howtoplay">How to Play</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#advantages">Advantages</a></li>
+        <li><a href="#gallery">Gallery</a></li>
       </ul>
-      <button type="button" class="btn-close" data-action="close">close</button>
+    </nav>
+    <button type="button" class="burger" data-menu-open><img src="../img/header/menu.png" alt="burger"></button>
+  </div>
+
+  <div data-menu class="mobile_menu">
+    <div class="header-mb">
+      <img src="../img/header/logo.png" alt="Game logo">
+      <button class="exit" type="button" data-menu-close>&times;</button>
     </div>
-  </nav>
+    <nav class="mobile">
+      <ul class="header-ul">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#characters">Characters</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#howtoplay">How to Play</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#advantages">Advantages</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+
 </header>
 
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="/vanilla-vite-template/assets/javascript-8dac5379.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <section class="vite-promo">
-  <div class="container">
-    <div class="wrapper">
-      <h2 class="title">
-        <span class="gradient">Vite</span>
-      </h2>
-      <p class="text">Next Generation Frontend Tooling</p>
-      <p class="tagline">
-        Get ready for a development environment that can finally catch up with
-        you.
-      </p>
-
-      <ul class="actions">
-        <li class="action">
-          <a class="link" href="https://vitejs.dev/guide/" target="_blank" rel="noopener noreferrer">Get Started</a>
-        </li>
-        <li class="action">
-          <a class="link" href="https://github.com/vitejs/vite" target="_blank" rel="noopener noreferrer">View on
-            GitHub</a>
-        </li>
-      </ul>
+  <main>
+    <div id="cookie-banner" data-banner class="">
+    <div class="container-coocies container">
+        <h3>Cookies Policy</h3>
+        <p>We use cookies to improve your experience on our website. By browsing this website, you agree to our use of
+            cookies.</p>
+        <button data-accept>Accept cookies</button>
+        <button data-decline>Decline cookies</button>
     </div>
-
-    <div class="thumb">
-      <!-- Path to images as from index.html file -->
-      <img class="pic" src="/vanilla-vite-template/assets/vite-logo-51249ca9.png" alt="Vite logo" width="640" height="640" />
+</div>
+    <section class="home container" id="home">
+    <!-- <div class="home-content"> -->
+    <!-- <h2 class="vissibily-hidden">home</h2> -->
+    <img class="occital" src="./images/mobil/occital.png" alt="occital">
+    <div class="title-home">
+        <p>Walk the Earth <br>Save Two Worlds</p>
+        <button>Play Now</button>
     </div>
-  </div>
+    <!-- </div> -->
+    <img class="hero-frame-mob" src="./images/mobil/frame-mob-hero.png" alt="frame" width="320" />
+    <img class="hero-frame-desk" src="./images/mobil/frame-desk-hero.png" alt="frame" width="1200" />
 </section>
+    <!-- ENOENT: no such file or directory, open '/home/runner/work/stp-8889-team/stp-8889-team/src/.partials/about.html'
+    ENOENT: no such file or directory, open '/home/runner/work/stp-8889-team/stp-8889-team/src/.partials/features.html'
+    ENOENT: no such file or directory, open '/home/runner/work/stp-8889-team/stp-8889-team/src/.partials/characters.html'
+    ENOENT: no such file or directory, open '/home/runner/work/stp-8889-team/stp-8889-team/src/.partials/video.html'
+    ENOENT: no such file or directory, open '/home/runner/work/stp-8889-team/stp-8889-team/src/.partials/reviews.html'
+    ENOENT: no such file or directory, open '/home/runner/work/stp-8889-team/stp-8889-team/src/.partials/play.html'
+    ENOENT: no such file or directory, open '/home/runner/work/stp-8889-team/stp-8889-team/src/.partials/answer.html'
+    ENOENT: no such file or directory, open '/home/runner/work/stp-8889-team/stp-8889-team/src/.partials/faq.html'
+    ENOENT: no such file or directory, open '/home/runner/work/stp-8889-team/stp-8889-team/src/.partials/advantages.html'
+    ENOENT: no such file or directory, open '/home/runner/work/stp-8889-team/stp-8889-team/src/.partials/gallery.html' -->
+  </main>
+  <!-- ENOENT: no such file or directory, open '/home/runner/work/stp-8889-team/stp-8889-team/src/.partials/footer.html' -->
 
-    
-  </body>
+
+
+  
+</body>
+
 </html>
