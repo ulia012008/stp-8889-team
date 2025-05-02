@@ -21,7 +21,7 @@
   max-width: 320px;
   margin: 0 auto;
   @include media(desktop) {
-    padding: 0 180px;
+    padding: 0 80px;
     max-width: 1200px;
   }
 }
