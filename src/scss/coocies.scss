@@ -1,10 +1,14 @@
 [data-banner] {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   position: fixed;
   bottom: 0;
+  text-align: center;
+  margin: 0 auto;
   z-index: 1000;
   width: 100%;
   padding: 23px 20px;
-
   background: #f2f4f5;
 }
 
