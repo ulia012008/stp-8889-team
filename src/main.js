@@ -1,5 +1,4 @@
 import { mobileMenu } from './js/mobileMenu.js';
-import { shouldShowCookieBanner, setCookieConsent } from './js/coocies.js';
 
 mobileMenu();
 document.addEventListener('DOMContentLoaded', function () {
