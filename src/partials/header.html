@@ -1,23 +1,40 @@
 <header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="/page-2.html" class="nav-link">Page 2</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="/page-3.html" class="nav-link">Page 3</a>
-      </li>
-    </ul>
-    <button type="button" class="burger-btn" data-action="open">Open menu</button>
-    <div class="burger-menu" data-visible="close">
-      <ul>
-        <li><a href="#">link-1</a></li>
-        <li><a href="#">link-2</a></li>
-        <li><a href="#">link-3</a></li>
-        <li><a href="#">link-4</a></li>
+  <div class="menu-header container">
+    <img src="../img/header/logo.png" alt="Game logo">
+    <nav class="desk_nav">
+      <ul class="header-ul">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#characters">Characters</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#howtoplay">How to Play</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#advantages">Advantages</a></li>
+        <li><a href="#gallery">Gallery</a></li>
       </ul>
-      <button type="button" class="btn-close" data-action="close">close</button>
+    </nav>
+    <button type="button" class="burger" data-menu-open><img src="../img/header/menu.png" alt="burger"></button>
+  </div>
+
+  <div data-menu class="mobile_menu">
+    <div class="header-mb">
+      <img src="../img/header/logo.png" alt="Game logo">
+      <button class="exit" type="button" data-menu-close>&times;</button>
     </div>
-  </nav>
+    <nav class="mobile">
+      <ul class="header-ul">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#characters">Characters</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#howtoplay">How to Play</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#advantages">Advantages</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+
 </header>

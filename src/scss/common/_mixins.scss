@@ -8,34 +8,27 @@ screen types:
     to-desktop
     desktop,
 */
-@mixin media($_screen) {
-  @if $_screen == mobile {
+
+@mixin media($screen) {
+  @if $screen == mobile {
     @media screen and (min-width: $mobile) {
       @content;
     }
-  } @else if $_screen == to-tablet {
-    @media screen and (max-width: $to-tablet) {
-      @content;
-    }
-  } @else if $_screen == tablet {
-    @media screen and (min-width: $tablet) {
-      @content;
-    }
-  } @else if $_screen == to-desktop {
-    @media screen and (max-width: $to-desktop) {
-      @content;
-    }
-  } @else if $_screen == desktop {
+  } @else if $screen == desktop {
     @media screen and (min-width: $desktop) {
+      @content;
+    }
+  } @else if $screen == large {
+    @media screen and (min-width: $large-desktop) {
       @content;
     }
   }
 }
 
-@mixin font($_fsz, $_lnh) {
-  font-size: #{$_fsz}px;
+// @mixin font($_fsz, $_lnh) {
+//   font-size: #{$_fsz}px;
 
-  $result: math.div($_lnh, $_fsz);
+//   $result: math.div($_lnh, $_fsz);
 
-  line-height: math.div(math.round($result * 100), 100);
-}
+//   line-height: math.div(math.round($result * 100), 100);
+// }
