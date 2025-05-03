@@ -1,80 +1,78 @@
 [data-banner] {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: none;
   position: fixed;
   bottom: 0;
-  text-align: center;
-  margin: 0 auto;
-  z-index: 1000;
   width: 100%;
-  padding: 23px 20px;
+  padding: 20px;
   background: #f2f4f5;
+  text-align: center;
+  z-index: 998;
 }
 
-.container-coocies {
+[data-banner][data-show='true'] {
+  display: flex;
+  justify-content: center;
+}
+
+[data-banner-container] {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  text-align: center;
   align-items: center;
-  padding: 20px 23px;
+  padding: 20px;
+  width: 320px;
+
   @include media(desktop) {
     width: 1200px;
     padding: 40px 168px;
   }
-  [data-accept] {
-    border-radius: 10px;
-    background-color: $black;
-    padding: 15px 85px;
-    width: 280px;
-    height: 50px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
-    text-align: center;
-    color: $light-text;
-
-    @include media(desktop) {
-      width: 245px;
-      height: 64px;
-      font-size: 20px;
-    }
-  }
-  [data-decline] {
-    border-radius: 10px;
-    background-color: transparent;
-    padding: 15px 85px;
-    width: 280px;
-    height: 50px;
-    border: 1px solid var(--black);
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
-    text-align: center;
-    color: var(--black);
-
-    @include media(desktop) {
-      width: 245px;
-      height: 64px;
-      font-size: 20px;
-    }
-  }
-  [data-accept]:hover {
-    background: $highlighted-bg;
-  }
-  [data-decline]:hover {
-    background: $card-bg;
-  }
 }
-.coocies-btn {
+
+[data-banner-buttons] {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
   @include media(desktop) {
     flex-direction: row;
     gap: 20px;
+  }
+}
+
+[data-accept],
+[data-decline] {
+  border-radius: 10px;
+  padding: 15px 85px;
+  width: 280px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  text-align: center;
+
+  @include media(desktop) {
+    width: 245px;
+    height: 64px;
+    font-size: 20px;
+  }
+}
+
+[data-accept] {
+  background-color: $black;
+  color: $light-text;
+
+  &:hover {
+    background: $highlighted-bg;
+  }
+}
+
+[data-decline] {
+  background-color: transparent;
+  border: 1px solid var(--black);
+  color: var(--black);
+
+  &:hover {
+    background: $card-bg;
   }
 }
