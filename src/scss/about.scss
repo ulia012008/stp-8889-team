@@ -1,12 +1,27 @@
 .about {
   background: var(--highlighted-bg);
   padding-top: 40px;
+  @include media(desktop) {
+    padding-top: 80px;
+  }
+  .container-about {
+    display: flex;
+    flex-direction: column;
+    @include media(desktop) {
+      flex-direction: row;
+      gap: 15px;
+    }
+  }
 
   h2 {
     font-weight: 600;
     font-size: 32px;
     color: var(--light-text);
     margin-bottom: 20px;
+    @include media(desktop) {
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
   }
   p {
     font-weight: 400;
@@ -14,15 +29,24 @@
     letter-spacing: -0.02em;
     color: var(--light-text);
     margin-bottom: 20px;
+    @include media(desktop) {
+      width: 598px;
+      font-size: 24px;
+    }
   }
 }
 .about-image-wrapper {
   display: flex;
   justify-content: flex-end;
   margin-right: -20px;
-  margin-bottom: -20px;
+
   img {
     width: 242px;
     height: 274px;
+
+    @include media(desktop) {
+      width: 427px;
+      height: 483px;
+    }
   }
 }
