@@ -3,7 +3,7 @@
   top: 0;
   z-index: 1000;
   width: 100%;
-  padding: 10.5px 20px;
+  padding: 10.5px 0;
   height: 60px;
   background: $basic-bg;
   border-bottom: 1px solid var(--line);
@@ -27,7 +27,7 @@
 .burger {
   background: transparent;
   border: none;
-  cursor: pointer;
+
   @include media(desktop) {
     display: none;
   }
@@ -57,7 +57,7 @@
   line-height: 100%;
   text-align: left;
   color: var(--black);
-  padding-left: 20px;
+
   padding: 60px 20px;
   @include media(desktop) {
     flex-direction: row;
@@ -75,6 +75,7 @@
   padding: 10.5px 20px;
   background: var(--basic-bg);
   border-bottom: 1px solid var(--line);
+  width: 100vw;
 }
 
 [data-menu] {
@@ -93,9 +94,9 @@
   display: block;
 }
 [data-menu-close] {
-  position: absolute;
+  // position: absolute;
   top: 15px;
-  right: 20px;
+  right: 40px;
   font-size: 30px;
   background: none;
   border: none;
