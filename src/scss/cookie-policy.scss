@@ -1,5 +1,12 @@
 [data-go-home] {
-  display: flex;
+  display: none; // приховати всюди
+
+  body[data-page='privacy'] &,
+  body[data-page='terms'] &,
+  body[data-page='cookies'] & {
+    display: flex; // показати лише на цих сторінках
+  }
+
   align-items: center;
   gap: 28px;
   font-weight: 400;
