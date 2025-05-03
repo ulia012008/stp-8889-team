@@ -4,19 +4,23 @@
   position: relative;
   background-color: $basic-bg;
   width: 100%;
-  padding-top: 40px;
   margin: 0 auto;
+  padding-bottom: 20px;
+
   @include media(desktop) {
     flex-direction: column;
+    padding-bottom: 40px;
   }
 }
 
 .play-content {
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   @include media(desktop) {
+    padding: 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -24,67 +28,88 @@
   }
 }
 .play h2 {
-  align-self: flex-start;
   margin-bottom: 20px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--black);
+  align-self: flex-start;
+
+  @include media(desktop) {
+    font-size: 48px;
+  }
 }
 
-.play p {
-  align-self: flex-start;
-  padding-top: 12px;
-  margin-bottom: 20px;
-}
 .ul-play {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  list-style: none;
+  padding: 0;
   gap: 20px;
   @include media(desktop) {
     flex-direction: row;
     flex-wrap: wrap;
-    // gap: 20px;
+    justify-content: center;
+    gap: 20px;
   }
 }
-.ul-play .list-play {
+.ul-play .card-play {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 100%;
-  height: auto;
-  padding: 0 73.5px;
   box-sizing: border-box;
-
-  @include media(desktop) {
-    flex-direction: column;
-    padding: 0 56px;
-    height: 209px;
-    width: calc(25% - 20px);
-    &:nth-child(n + 5) {
-      width: calc(33.33% - 20px);
-    }
-  }
-}
-
-.ul-play .list-play:last-child {
-  margin-bottom: 0;
-}
-
-.img-play {
-  margin-bottom: 12px;
+  width: 100%;
 
   @include media(desktop) {
     margin-bottom: 0;
-    margin-right: 24px;
+    width: calc(25% - 20px);
+    // &:nth-child(n + 5) {
+    //   width: calc(33.333% - 20px);
   }
 }
-.text-play {
+
+.img-play {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+
+  @include media(desktop) {
+    margin-bottom: 24px;
+    align-self: center;
+  }
+}
+
+.ul-play .card-play:last-child {
+  margin-bottom: 0;
+}
+.list-play-card {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include media(desktop) {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.text-play {
+  width: 214px;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
   text-align: center;
   color: var(--text);
+  @include media(desktop) {
+    width: 100%;
+    text-align: center;
+    padding-top: 0;
+    font-size: 20px;
+  }
 }
