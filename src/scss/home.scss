@@ -1,14 +1,11 @@
 .home {
   display: flex;
   flex-direction: column;
-
   background-color: $basic-bg;
   width: 100%;
   padding-top: 89px;
   margin: 0 auto;
-  // @include media(desktop) {
-  //   flex-direction: row;
-  // }
+
   .home-content {
     display: flex;
     position: relative;
