@@ -1,63 +1,4 @@
-// .footer {
-//   background-color: var(--highlighted-bg);
-//   padding-bottom: 40px;
-//   text-align: center;
-//   color: var(--light-text);
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   height: 123px;
-//   @include media(desktop) {
-//     padding-bottom: 60px;
-//   }
-// }
-
-// .footer-links {
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-//   justify-content: center;
-//   row-gap: 20px;
-//   column-gap: 4px;
-//   max-width: 100%;
-//   margin-bottom: 16px;
-
-//   a {
-//     font-weight: 500;
-//     font-size: 12px;
-//     letter-spacing: -0.02em;
-//     color: var(--light-text);
-//     text-decoration: none;
-//     width: 50%;
-//     text-align: center;
-
-//     @include media(desktop) {
-//       font-size: 16px;
-//       width: auto;
-//     }
-
-//     &:hover {
-//       text-decoration: underline;
-//     }
-//   }
-
-//   a:nth-child(3) {
-//     width: 100%; // третій переноситься на новий рядок
-//     margin-top: 5px;
-//   }
-// }
-
-// .rights {
-//   font-weight: 400;
-//   font-size: 10px;
-//   letter-spacing: -0.02em;
-//   color: var(--light-text);
-
-//   @include media(desktop) {
-//     font-size: 13px;
-//   }
-// }
-.footer {
+footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -72,42 +13,41 @@
     height: 148px;
     gap: 20px;
   }
-}
-.footer-links {
-  display: flex;
-  flex-direction: row;
-  gap: 5px 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 280px;
-  margin: 0 auto;
-  @include media(desktop) {
+  ul {
+    display: flex;
     flex-direction: row;
-    gap: 40px;
-    width: 1140px;
+    gap: 5px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 280px;
+    margin: 0 auto;
+    @include media(desktop) {
+      flex-direction: row;
+      gap: 40px;
+      width: 1140px;
+    }
+    a {
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: -0.02em;
+      color: var(--light-text);
+      @include media(desktop) {
+        font-size: 16px;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
-  a {
-    font-weight: 500;
-    font-size: 12px;
+  p {
+    font-weight: 400;
+    font-size: 10px;
     letter-spacing: -0.02em;
+    text-align: center;
     color: var(--light-text);
     @include media(desktop) {
-      font-size: 16px;
+      font-size: 13px;
     }
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-.rights {
-  font-weight: 400;
-  font-size: 10px;
-  letter-spacing: -0.02em;
-  text-align: center;
-  color: var(--light-text);
-  @include media(desktop) {
-    font-size: 13px;
   }
 }

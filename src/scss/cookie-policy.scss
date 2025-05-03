@@ -1,0 +1,35 @@
+[data-go-home] {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--black);
+  background: transparent;
+  padding: 0 21px;
+  padding-top: 10.5px;
+  line-height: 112%;
+  text-align: center;
+  width: 320px;
+  margin: 0 auto;
+  img {
+    width: 7px;
+    height: 14px;
+
+    @include media(desktop) {
+      width: 9px;
+      height: 18px;
+    }
+  }
+
+  @include media(desktop) {
+    font-size: 18px;
+    line-height: 100%;
+    padding: 21px 80px;
+    width: 1200px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
