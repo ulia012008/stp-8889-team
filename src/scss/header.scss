@@ -1,3 +1,13 @@
+body.data-lock-scroll {
+  overflow: hidden;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+  @include media(desktop) {
+    scroll-padding-top: 100px;
+  }
+}
 .header {
   position: fixed;
   top: 0;
@@ -90,8 +100,11 @@
   z-index: 999;
 }
 
-[data-menu].is-open {
+[data-menu][data-menu-visible] {
   display: block;
+}
+[data-lock-scroll] {
+  overflow: hidden;
 }
 [data-menu-close] {
   // position: absolute;
@@ -102,20 +115,4 @@
   border: none;
   cursor: pointer;
   color: var(--black);
-}
-
-[data-banner] {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  position: fixed;
-  bottom: 0;
-  width: 320px;
-  background: #f2f4f5;
-  padding: 20px 23px;
-  text-align: center;
-  margin: 0 auto;
-  @include media(desktop) {
-    width: 1200px;
-  }
 }
