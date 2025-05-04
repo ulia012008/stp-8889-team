@@ -10,16 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     .forEach(container => {
       container.swiperParams = {
         loop: true,
-<<<<<<< Updated upstream
+
         // Розмір слайдів буде зчитано з CSS, тому 'auto'
         slidesPerView: 'auto',
         centeredSlides: true,
         initialSlide: 2, // середній слайд (за кількістю 5)
-=======
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        initialSlide: 2,
->>>>>>> Stashed changes
+
+       
+
         grabCursor: true,
         keyboard: {
           enabled: true,
