@@ -1,3 +1,5 @@
+/* === CHARACTERS SECTION FULL SCSS === */
+
 .characters {
   background-color: $basic-bg;
   width: 100%;
@@ -9,13 +11,10 @@
 }
 
 .characters-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @include media(desktop) {
-    width: 1200px;
-  }
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .characters h2 {
@@ -29,34 +28,31 @@
   @include media(desktop) {
     font-size: 48px;
     margin-bottom: 40px;
-    align-self: flex-start;
-    padding: 64px 0 0 91px;
+    text-align: left;
+    padding-left: 91px;
+    padding-top: 64px;
   }
 }
 
-.characters-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
-  flex-direction: column;
-  //   gap: 20px;
-
-  @include media(desktop) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  flex-direction: row;
+  overflow: visible;
+  scroll-snap-type: x mandatory;
+  justify-content: center;
 }
 
 .characters-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 280px;
-
-  @include media(desktop) {
-    max-width: 576px;
-  }
+  justify-content: flex-start;
+  height: auto;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
 }
 
 .characters-img {
@@ -72,8 +68,10 @@
 
   img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease, width 0.3s, height 0.3s;
   }
 }
 
@@ -104,4 +102,120 @@
   @include media(desktop) {
     font-size: 20px;
   }
+}
+
+/* === SLIDER BEHAVIOR === */
+
+// 1. MOBILE
+@media (max-width: 1199px) {
+  swiper-slide.characters-card {
+    width: 280px !important;
+    height: 428px;
+    margin: 0 auto;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
+
+  swiper-slide.characters-card img {
+    transform: scale(1);
+  }
+
+  swiper-slide.swiper-slide-active img {
+    transform: scale(1.05);
+  }
+
+  .characters-card h3,
+  .characters-card p {
+    opacity: 1;
+    display: block;
+  }
+}
+
+// 2. DESKTOP
+@media (min-width: 1200px) {
+  swiper-container {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+
+  swiper-slide.characters-card {
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+
+  swiper-slide.swiper-slide-active {
+    width: 576px !important;
+    z-index: 2;
+  }
+
+  swiper-slide.swiper-slide-active img {
+    width: 576px;
+    height: 433px;
+    object-fit: contain;
+    transform: scale(1);
+  }
+
+  swiper-slide:not(.swiper-slide-active) {
+    width: 142px !important;
+    transform: scale(0.85);
+  }
+
+  swiper-slide:not(.swiper-slide-active) img {
+    width: 142px;
+    height: 142px;
+    object-fit: cover;
+  }
+
+  .characters-card h3,
+  .characters-card p {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  swiper-slide.swiper-slide-active h3,
+  swiper-slide.swiper-slide-active p {
+    opacity: 1;
+  }
+}
+
+/* === NAVIGATION BUTTONS === */
+swiper-container::part(button-next),
+swiper-container::part(button-prev) {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  swiper-container::part(button-next),
+  swiper-container::part(button-prev) {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* === PAGINATION === */
+swiper-container::part(pagination) {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+swiper-container::part(bullet) {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+swiper-container::part(bullet-active) {
+  opacity: 1;
+  background-color: black;
 }
