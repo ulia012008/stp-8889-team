@@ -18,7 +18,7 @@ html {
   background: $basic-bg;
   border-bottom: 1px solid var(--line);
   @include media(desktop) {
-    padding: 24px 80px;
+    padding: 24px 0;
     height: 100px;
   }
 }

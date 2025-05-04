@@ -1,0 +1,129 @@
+#advantages {
+  padding: 40px 20px;
+  @include media(desktop) {
+    padding: 80px;
+  }
+  .adv-hob {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 62px;
+    h2 {
+      font-weight: 600;
+      font-size: 32px;
+      @include media(desktop) {
+        font-size: 48px;
+      }
+    }
+    .hobbit {
+      display: none;
+      @include media(desktop) {
+        display: flex;
+        margin-right: -78px;
+        margin-top: -90px;
+        z-index: 988;
+        width: 181px;
+        height: fit-content;
+      }
+    }
+  }
+  .advantages {
+    ul {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+
+      @include media(desktop) {
+        margin-top: 40px;
+        grid-template-columns: repeat(6, 1fr);
+        margin-top: 40px;
+
+        max-width: 1200px; // або 1000px — залежить від твого дизайну
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    li {
+      display: flex;
+      justify-content: center; // по горизонталі
+      align-items: center; // по вертикалі
+      text-align: center;
+      border: 1px solid var(--highlighted-stroke);
+      border-radius: 20px;
+      padding: 16px 8px;
+      width: 132px;
+      height: 125px;
+      font-weight: 500;
+      font-size: 16px;
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
+      @include media(desktop) {
+        display: grid;
+        padding: 16px 32px;
+        width: 333px;
+        height: 84px;
+        font-size: 20px;
+        &:nth-child(1) {
+          grid-column: span 2;
+        }
+        &:nth-child(2) {
+          grid-column: span 2;
+        }
+        &:nth-child(3) {
+          grid-column: span 2;
+        }
+
+        &:nth-child(4) {
+          grid-column: span 3;
+          margin-left: 178px;
+        }
+        &:nth-child(5) {
+          grid-column: span 3;
+        }
+
+        &:nth-child(6) {
+          grid-column: span 2;
+        }
+        &:nth-child(7) {
+          grid-column: span 2;
+        }
+        &:nth-child(8) {
+          grid-column: span 2;
+        }
+
+        &:nth-child(9) {
+          grid-column: span 3;
+          margin-left: 178px;
+        }
+        &:nth-child(10) {
+          grid-column: span 3;
+        }
+      }
+      &:hover {
+        transform: scale(1.09);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 1.5);
+        z-index: 1;
+      }
+      &:nth-child(1),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(7),
+      &:nth-child(10) {
+        background-color: var(--highlighted-bg);
+        color: var(--light-text);
+        @include media(desktop) {
+        }
+      }
+      &:nth-child(2),
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(8),
+      &:nth-child(9) {
+        background: var(--card-bg);
+        color: var(--black);
+      }
+    }
+  }
+}
