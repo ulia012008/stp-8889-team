@@ -41,9 +41,12 @@
   }
 }
 .policy {
+  width: 320px;
+  margin: 0 auto;
   padding: 100px 20px;
   color: var(--black);
   @include media(desktop) {
+    width: 1200px;
     padding: 140px 80px;
   }
   h2 {

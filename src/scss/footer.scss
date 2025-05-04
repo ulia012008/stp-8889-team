@@ -31,10 +31,10 @@ footer {
       font-size: 12px;
       letter-spacing: -0.02em;
       color: var(--light-text);
+
       @include media(desktop) {
         font-size: 16px;
       }
-
       &:hover {
         text-decoration: underline;
       }
