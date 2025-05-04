@@ -41,11 +41,12 @@
   margin-right: -20px;
 
   img {
-    border-top-left-radius: 40px;
+    border-top-left-radius: 25px;
     width: 242px;
     height: 274px;
 
     @include media(desktop) {
+      border-top-left-radius: 40px;
       width: 427px;
       height: 483px;
     }
