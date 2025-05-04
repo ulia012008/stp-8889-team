@@ -36,7 +36,7 @@
     align-items: center;
     margin-bottom: 65px;
     @include media(desktop) {
-      margin-bottom: 46px;
+      margin-bottom: 0px;
       width: 574px;
     }
   }
@@ -57,7 +57,6 @@
     padding: 18px 45px;
     width: 280px;
     height: 52px;
-    font-family: var(--font-family);
     font-weight: 600;
     font-size: 16px;
     line-height: 120%;
@@ -67,10 +66,13 @@
     margin: 0 auto;
     @include media(desktop) {
       width: 243px;
+      font-size: 20px;
+      width: 243px;
+      height: 64px;
     }
-  }
-  button:hover {
-    background: $highlighted-bg;
+    &:hover {
+      background: $highlighted-bg;
+    }
   }
 }
 
