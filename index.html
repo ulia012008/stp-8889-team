@@ -22,13 +22,16 @@
     <title>MythWalker</title>
     
     <script type="module" crossorigin src="/stp-8889-team/commonHelpers2.js"></script>
-    <link rel="stylesheet" href="/stp-8889-team/assets/styles-c9625df0.css">
+    <link rel="stylesheet" href="/stp-8889-team/assets/styles-be59253b.css">
   </head>
 
   <body>
     <header class="header">
   <div class="menu-header container">
-    <img src="/stp-8889-team/assets/logo-488ff782.png" alt="Game logo">
+    <a href="#home">
+      <img src="/stp-8889-team/assets/logo-488ff782.png" alt="Game logo">
+    </a>
+
     <nav class="desk_nav">
       <ul class="header-ul">
         <li><a href="#home">Home</a></li>
@@ -89,7 +92,9 @@
 
         <div class="title-home">
             <p>Walk the Earth <br>Save Two Worlds</p>
-            <button>Play Now</button>
+            <button type="button" id="play-btn"
+                data-game-url="https://play.google.com/store/apps/details?id=com.nantg.ng1&hl=en&gl=us">Play
+                Now</button>
         </div>
     </div>
     <div class="hero-frame-mob"><img src="/stp-8889-team/assets/frame-mob-hero-3011fcc3.png" alt="frame" width="320" /></div>
