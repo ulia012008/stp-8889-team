@@ -57,7 +57,9 @@
     gap: 20px;
   }
 }
-
+[data-accept] {
+  border: none;
+}
 [data-accept],
 [data-decline] {
   border-radius: 10px;
