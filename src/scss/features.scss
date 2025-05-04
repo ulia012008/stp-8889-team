@@ -3,7 +3,7 @@
   background-color: $basic-bg;
   padding: 40px 0px;
   @include media(desktop) {
-    padding: 16px 0px;
+    padding: 80px 0px;
   }
   h2 {
     font-weight: 600;
@@ -32,9 +32,15 @@
       border-radius: 20px;
       text-align: center;
       height: 225px;
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
       @include media(desktop) {
         padding: 74px 10px 48px 10px;
         height: 308px;
+      }
+      &:hover {
+        transform: scale(1.09);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 1.5);
+        z-index: 1;
       }
 
       h3 {
