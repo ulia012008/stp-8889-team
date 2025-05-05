@@ -18,7 +18,7 @@
   <script type="module" crossorigin src="/stp-8889-team/commonHelpers2.js"></script>
   <link rel="modulepreload" crossorigin href="/stp-8889-team/assets/vendor-c7d9b173.js">
   <link rel="stylesheet" href="/stp-8889-team/assets/vendor-7c8ef494.css">
-  <link rel="stylesheet" href="/stp-8889-team/assets/styles-4af43e8a.css">
+  <link rel="stylesheet" href="/stp-8889-team/assets/styles-2e9c6df7.css">
 </head>
 
 <body>
@@ -83,9 +83,13 @@
     <section class="home" id="home">
     <div class="home-content container">
         <!-- <h2 class="vissibily-hidden">home</h2> -->
-        <img class="occital" src="/stp-8889-team/assets/bg-home-ca9e3c84.png" srcset="/stp-8889-team/assets/bg-home-ca9e3c84.png , /stp-8889-team/assets/bg-home2x-45102b90.png "
-            alt="occital">
-
+        <picture>
+            <source srcset="/stp-8889-team/assets/bg-home@2x-45102b90.png 2x, /stp-8889-team/assets/bg-home-ca9e3c84.png 1x" media="(min-width: 1200px)"
+                type="image/png">
+            <source srcset="/stp-8889-team/assets/bg-home@2x-45102b90.png 2x, /stp-8889-team/assets/bg-home-ca9e3c84.png 1x" media="(max-width: 1199px)"
+                type="image/png">
+            <img class="occital" src="/stp-8889-team/assets/bg-home-ca9e3c84.png" alt="occital" loading="lazy">
+        </picture>
         <div class="title-home">
             <p>Walk the Earth <br>Save Two Worlds</p>
             <button type="button" id="play-btn"
@@ -426,8 +430,14 @@
           <strong>Google Play
           </strong></span></button>
     </div>
-    <img src="/stp-8889-team/assets/answer-mob@2x-41cf5bc7.png" srcset="/stp-8889-team/assets/answer-mob-930d5882.png , /stp-8889-team/assets/answer@2x-0057521a.png 2x" alt="">
-
+    <picture>
+      <source srcset="/stp-8889-team/assets/answer-c3add2b8.png , /stp-8889-team/assets/answer@2x-0057521a.png 2x" media="(min-width: 1200px)"
+        type="image/png">
+      <source srcset="/stp-8889-team/assets/answer-mob-930d5882.png , /stp-8889-team/assets/answer-mob@2x-41cf5bc7.png 2x" media="(max-width: 1199px)"
+        type="image/png">
+      <img src="/stp-8889-team/assets/answer-mob@2x-41cf5bc7.png" srcset="/stp-8889-team/assets/answer-mob-930d5882.png , /stp-8889-team/assets/answer@2x-0057521a.png 2x"
+        alt="Answer the Call Walk with Legends" loading="lazy" width="598" height="226">
+    </picture>
   </div>
 </section>
 
