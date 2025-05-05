@@ -1,13 +1,6 @@
-/* === CHARACTERS SECTION FULL SCSS === */
-
 .characters {
   background-color: $basic-bg;
   width: 100%;
-  padding-bottom: 20px;
-
-  @include media(desktop) {
-    padding-bottom: 40px;
-  }
 }
 
 .characters-container {
@@ -18,31 +11,30 @@
 }
 
 .characters h2 {
-  font-family: var(--font-family);
   font-weight: 600;
   font-size: 32px;
-  color: var(--black);
   text-align: center;
-  margin-bottom: 20px;
 
   @include media(desktop) {
     font-size: 48px;
-    margin-bottom: 40px;
     text-align: left;
     padding-left: 91px;
-    padding-top: 64px;
   }
 }
 
 swiper-container {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 22px;
   display: flex;
   flex-direction: row;
   overflow: visible;
   scroll-snap-type: x mandatory;
   justify-content: center;
+  @include media(desktop) {
+    padding-top: 40px;
+    padding-bottom: 39px;
+  }
 }
 
 .characters-card {
@@ -76,10 +68,8 @@ swiper-container {
 }
 
 .characters-card h3 {
-  font-family: var(--font-family);
   font-weight: 600;
   font-size: 24px;
-  color: var(--black);
   text-align: center;
   margin-bottom: 12px;
   width: 100%;
@@ -104,9 +94,8 @@ swiper-container {
   }
 }
 
-/* === SLIDER BEHAVIOR === */
+/* === SLIDER  === */
 
-// 1. MOBILE
 @media (max-width: 1199px) {
   swiper-slide.characters-card {
     width: 280px !important;
@@ -131,7 +120,6 @@ swiper-container {
   }
 }
 
-// 2. DESKTOP
 @media (min-width: 1200px) {
   swiper-container {
     max-width: 1040px;
