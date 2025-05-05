@@ -1,20 +1,37 @@
-.action {
+.answer {
   background-color: var(--highlighted-bg);
   padding: 30px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  @include media(desktop) {
+    padding: 40px 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include media(desktop) {
+      flex-direction: row;
+    }
+  }
   h2 {
     font-weight: 600;
     font-size: 32px;
     color: var(--light-text);
     margin-bottom: 10px;
+    @include media(desktop) {
+      font-size: 36px;
+    }
   }
   p {
     font-weight: 500;
     font-size: 16px;
     letter-spacing: -0.02em;
     color: var(--light-text);
+    margin-bottom: 20px;
+    @include media(desktop) {
+      font-weight: 500;
+      font-size: 18px;
+    }
   }
   button {
     display: flex;
@@ -26,20 +43,26 @@
     padding: 8px 12px;
     width: 159px;
     height: 46px;
+    color: #fff;
 
     text-align: left;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.8s, color 0.8s;
 
     @include media(desktop) {
-      width: 243px;
-      height: 64px;
+      width: 194px;
+      height: 56px;
       font-size: 20px;
     }
 
     svg {
       flex-shrink: 0;
       margin-right: 2px;
+      @include media(desktop) {
+        margin-right: 5px;
+        width: 36px;
+        height: 36px;
+      }
     }
 
     span {
@@ -47,11 +70,16 @@
       flex-direction: column;
       font-weight: 500;
       font-size: 8px;
-      color: var(--light-text);
+      @include media(desktop) {
+        font-size: 12px;
+      }
 
       strong {
         font-size: 16px;
         font-weight: 600;
+        @include media(desktop) {
+          font-size: 20px;
+        }
       }
     }
 
