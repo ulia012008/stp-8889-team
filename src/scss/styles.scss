@@ -8,7 +8,11 @@
 @import './play.scss';
 @import './characters.scss';
 @import './advantages.scss';
+
 @import './reviews.scss';
+
+// @import './swiper.scss';
+
 
 :root {
   --basic-bg: #eae9e5;
@@ -32,5 +36,21 @@
   @include media(desktop) {
     padding: 0 80px;
     width: 1200px;
+  }
+}
+body {
+  overflow-x: hidden; /* Отключает горизонтальный скролл */
+}
+
+body.data-lock-scroll {
+  overflow: hidden; /* Отключает и вертикальный скролл при наличии этого класса */
+}
+
+html {
+  scroll-behavior: smooth; /* Плавная прокрутка */
+  scroll-padding-top: 60px; /* Отступ для прокрутки */
+
+  @include media(desktop) {
+    scroll-padding-top: 100px; /* Увеличиваем отступ для десктопов */
   }
 }

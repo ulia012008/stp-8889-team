@@ -37,7 +37,7 @@ html {
 .burger {
   background: transparent;
   border: none;
-  transition: transform 0.6s ease;
+
   @include media(desktop) {
     display: none;
   }
@@ -115,5 +115,4 @@ html {
   border: none;
   cursor: pointer;
   color: var(--black);
-  transition: transform 0.6s ease;
 }
