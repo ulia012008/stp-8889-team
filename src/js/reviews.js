@@ -5,10 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let reviewsSwiper;
 
   const initReviewsSwiper = () => {
-    // лише для мобілок
     if (window.innerWidth >= 1200) return;
 
-    // не ініціалізуємо вдруге
     if (reviewsSwiper) return;
 
     reviewsSwiper = new Swiper('[data-swiper="reviews"]', {
