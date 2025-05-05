@@ -7,9 +7,15 @@ import './js/characters.js';
 mobileMenu();
 handleCookieBanner();
 
-// buton PLAY
-
+// button PLAY
 document.getElementById('play-btn').addEventListener('click', e => {
   const gameUrl = e.target.getAttribute('data-game-url');
   window.open(gameUrl, '_blank');
 });
+// swiper
+
+// import { initSwiper } from './js/swiper.js';
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   initSwiper();
+// });

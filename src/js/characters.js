@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         centeredSlides: true,
         initialSlide: 2, // середній слайд (за кількістю 5)
 
-       
-
         grabCursor: true,
         keyboard: {
           enabled: true,
