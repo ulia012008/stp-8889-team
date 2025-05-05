@@ -24,6 +24,15 @@
         z-index: 988;
         width: 181px;
         height: fit-content;
+        animation: panImage 5s ease-in-out infinite alternate;
+      }
+      @keyframes panImage {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
       }
     }
   }
@@ -38,8 +47,7 @@
         margin-top: 40px;
         grid-template-columns: repeat(6, 1fr);
         margin-top: 40px;
-
-        max-width: 1200px; // або 1000px — залежить від твого дизайну
+        max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
         justify-content: center;

@@ -88,4 +88,12 @@
       color: var(--black);
     }
   }
+  img {
+    width: 280px;
+    height: 160px;
+    @include media(desktop) {
+      width: 598px;
+      height: 226px;
+    }
+  }
 }
