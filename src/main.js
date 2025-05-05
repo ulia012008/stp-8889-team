@@ -3,11 +3,9 @@ import { handleCookieBanner } from './js/coocies.js';
 import './js/characters';
 import './scss/styles.scss';
 import './js/reviews.js';
-import { updateSlideVisibility } from './js/characters.js';
 
 mobileMenu();
 handleCookieBanner();
-updateSlideVisibility();
 
 const playBtn = document.getElementById('play-btn');
 if (playBtn) {
