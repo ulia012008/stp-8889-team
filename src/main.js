@@ -7,10 +7,13 @@ import './js/reviews.js';
 mobileMenu();
 handleCookieBanner();
 
-const playBtn = document.getElementById('play-btn');
-if (playBtn) {
-  playBtn.addEventListener('click', e => {
-    const gameUrl = e.target.getAttribute('data-game-url');
-    window.open(gameUrl, '_blank');
+const buttons = document.querySelectorAll('#play-btn, #google');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', e => {
+    const gameUrl = e.currentTarget.getAttribute('data-game-url');
+    if (gameUrl) {
+      window.open(gameUrl, '_blank');
+    }
   });
-}
+});
