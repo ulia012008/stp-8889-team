@@ -1,12 +1,12 @@
-// .characters-wrapper {
-//   width: 100%;
-//   max-width: 1200px;
-//   overflow: hidden;
-// }
+.characters-wrapper {
+  width: 100%;
+  max-width: 1141px;
+  overflow: hidden;
+}
 
 .characters-container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -24,7 +24,7 @@
 }
 
 swiper-container {
-  width: 100%;
+  width: 1141px;
   padding-top: 20px;
   padding-bottom: 22px;
   display: flex;
@@ -123,7 +123,8 @@ swiper-container {
 
 @media (min-width: 1200px) {
   swiper-container {
-    max-width: 1040px;
+    max-width: 1141px !important;
+    width: 1141px !important;
     margin: 0 auto;
   }
 
@@ -174,16 +175,31 @@ swiper-container::part(button-prev) {
 }
 
 @media (min-width: 1200px) {
+  swiper-container {
+    position: relative;
+    max-width: 1141px !important;
+    width: 1141px !important;
+    margin: 0 auto;
+  }
+
   swiper-container::part(button-next),
   swiper-container::part(button-prev) {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    // align-items: center;
+    // justify-content: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
     background: white;
     border: 1px solid var(--black);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  }
+  swiper-container::part(button-prev) {
+    left: 88px;
+  }
+  swiper-container::part(button-next) {
+    right: 88px;
   }
 }
 

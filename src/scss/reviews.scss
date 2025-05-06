@@ -1,5 +1,4 @@
 .reviews-section {
-  background-color: $basic-bg;
   position: relative;
   padding-bottom: 40px;
 
@@ -25,9 +24,9 @@
 
 .reviews-container {
   position: relative;
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;
+  // padding: 0 16px;
   display: flex;
   flex-direction: column;
 }
@@ -35,7 +34,7 @@
 .reviews-title {
   font-weight: 600;
   font-size: 32px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 24px;
 
   @include media(desktop) {
@@ -57,15 +56,12 @@
 }
 
 .review-item {
-  flex: 0 0 auto;
   box-sizing: border-box;
-  width: 245px;
-  height: 206px;
+  width: 205px;
   background: url('../img/reviews/review-backgr@2x.png') no-repeat center/cover;
   background-size: 245px 205px;
+  margin: 0;
   padding: 25px 20px;
-  background-size: cover;
-  background-position: center;
 
   .review-autor {
     display: flex;
@@ -123,34 +119,35 @@
 }
 
 /* === SLIDER  === */
-
-.swiper-reviews {
-  position: relative;
-  overflow: hidden;
+.swiper[data-swiper='reviews'] {
   width: 100%;
-  max-width: 320px;
   margin: 0 auto;
-
-  @include media(desktop) {
-    max-width: 1200px;
-    width: 1200px;
-  }
+  overflow: visible;
 }
-
-.swiper-wrapper-reviews {
+.swiper[data-swiper='reviews'] .swiper-wrapper {
   display: flex;
 }
-
-.swiper-reviews .swiper-slide {
-  display: block !important;
-  box-sizing: border-box;
-  width: 100% !important;
-  max-width: 344px;
-  height: auto !important;
-  flex-shrink: 0;
+.swiper[data-swiper='reviews'] .swiper-slide {
+  flex: 0 0 auto;
+  width: 245px !important;
 }
-@media only screen and (min-width: 1220px) {
-  .swiper-reviews .swiper-slide {
-    max-width: 320px;
+
+@media (min-width: 1200px) {
+  .swiper[data-swiper='reviews'] {
+    overflow: visible;
+    width: auto;
+    max-width: none;
   }
+  .swiper[data-swiper='reviews'] .swiper-wrapper {
+    display: flex;
+    gap: 20px;
+    transform: none !important;
+  }
+  .swiper[data-swiper='reviews'] .swiper-slide {
+    width: 245px !important;
+  }
+}
+.swiper[data-swiper='reviews'] .review-item {
+  height: 206px !important;
+  box-sizing: border-box;
 }

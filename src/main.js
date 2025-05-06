@@ -3,6 +3,7 @@ import { handleCookieBanner } from './js/coocies.js';
 import './js/characters';
 import './scss/styles.scss';
 import './js/reviews.js';
+import './js/gallery.js';
 
 mobileMenu();
 handleCookieBanner();
