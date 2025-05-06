@@ -15,7 +15,7 @@
         font-size: 48px;
       }
     }
-    .hobbit {
+    [data-hobbit] {
       display: none;
       @include media(desktop) {
         display: flex;
@@ -24,7 +24,12 @@
         z-index: 988;
         width: 181px;
         height: fit-content;
-        animation: panImage 5s ease-in-out infinite alternate;
+        animation: panImage 10s ease-in-out infinite alternate;
+        animation-play-state: running;
+
+        &[data-paused] {
+          animation-play-state: paused;
+        }
       }
       @keyframes panImage {
         0% {
