@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
     .querySelectorAll('swiper-container[data-swiper]')
     .forEach(container => {
       container.swiperParams = {
-        loop: true,
+        loop: false,
         slidesPerView: 'auto',
         centeredSlides: true,
-        initialSlide: 2,
+        // initialSlide: 2,
 
         grabCursor: true,
         keyboard: {
@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
           1200: {
             slidesPerView: 3,
             spaceBetween: 143,
+            initialSlide: 2,
             centeredSlides: true,
-            initialSlide: 1,
             allowSlideNext: true,
             allowSlidePrev: true,
           },

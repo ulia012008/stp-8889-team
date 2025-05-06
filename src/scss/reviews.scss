@@ -30,6 +30,7 @@
   // padding: 0 16px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .reviews-title {
@@ -45,10 +46,10 @@
   }
 }
 
-.swiper-reviews,
-.reviews-list {
-  overflow: visible;
-}
+// .swiper-reviews,
+// .reviews-list {
+//   overflow: visible;
+// }
 
 .reviews-list {
   display: flex;
