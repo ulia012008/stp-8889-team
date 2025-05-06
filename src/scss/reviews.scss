@@ -27,10 +27,12 @@
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  // padding: 0 16px;
   display: flex;
-  flex-direction: column;
   overflow: hidden;
+  flex-direction: column;
+  @include media(desktop) {
+    overflow: visible;
+  }
 }
 
 .reviews-title {
@@ -45,11 +47,6 @@
     margin-bottom: 40px;
   }
 }
-
-// .swiper-reviews,
-// .reviews-list {
-//   overflow: visible;
-// }
 
 .reviews-list {
   display: flex;

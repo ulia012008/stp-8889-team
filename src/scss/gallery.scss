@@ -30,11 +30,6 @@
 .gallery-list {
   display: flex;
   flex-direction: row;
-  gap: 16px;
-
-  @include media(desktop) {
-    gap: 20px;
-  }
 }
 
 .gallery-item {
@@ -42,7 +37,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
 }
 .double-img {
   display: flex;
@@ -106,3 +100,58 @@
 //   height: 333px !important;
 //   box-sizing: border-box;
 // }
+
+/* === BUTTONS and PAGINATION === */
+
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  justify-content: flex-start;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 32px;
+  height: 32px;
+  background-color: #655959;
+  border-radius: 50%;
+  position: static;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  &::after {
+    font-size: 16px;
+    color: #333;
+  }
+}
+
+.swiper-pagination {
+  position: static;
+  display: flex;
+  gap: 8px;
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: #b62e2e;
+    border-radius: 50%;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #878080;
+  }
+}
+
+.gallery-controls {
+  display: none;
+  @media (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+    justify-content: flex-start;
+  }
+}
