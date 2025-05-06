@@ -5,29 +5,28 @@ document.addEventListener('DOMContentLoaded', () => {
   let gallerySwiper;
 
   const initGallerySwiper = () => {
-    if (window.innerWidth >= 1200) return;
-
     if (gallerySwiper) return;
+    const isDesktop = window.innerWidth >= 1200;
 
     gallerySwiper = new Swiper('[data-swiper="gallery"]', {
       loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
+      slidesPerView: isDesktop ? 3 : 'auto',
+      slidesPerGroup: isDesktop ? 3 : 1,
+      spaceBetween: isDesktop ? 20 : 16,
       watchOverflow: true,
-      breakpoints: {
-        0: {
-          slidesPerView: auto,
-          spaceBetween: 16,
-        },
-        1200: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        keyboard: {
-          enabled: true,
-          onlyInViewport: true,
-        },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
       },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      simulateTouch: true,
     });
   };
 
@@ -41,10 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initGallerySwiper();
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth < 1200) {
-      initGallerySwiper();
-    } else {
-      destroyGallerySwiper();
-    }
+    destroyGallerySwiper();
+    initGallerySwiper();
   });
 });
