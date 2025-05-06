@@ -1,7 +1,8 @@
 import { register } from 'swiper/element/bundle';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 register();
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,11 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     .forEach(container => {
       container.swiperParams = {
         loop: true,
-
-        // Розмір слайдів буде зчитано з CSS, тому 'auto'
         slidesPerView: 'auto',
         centeredSlides: true,
-        initialSlide: 2, // середній слайд (за кількістю 5)
+        initialSlide: 2,
 
         grabCursor: true,
         keyboard: {
@@ -39,7 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerView: 1,
           },
           1200: {
-            slidesPerView: 'auto',
+            slidesPerView: 3,
+            spaceBetween: 143,
+            centeredSlides: true,
+            initialSlide: 1,
+            allowSlideNext: true,
+            allowSlidePrev: true,
           },
         },
         on: {

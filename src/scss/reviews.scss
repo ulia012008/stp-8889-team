@@ -1,5 +1,4 @@
 .reviews-section {
-  background-color: $basic-bg;
   position: relative;
   padding-bottom: 40px;
 
@@ -23,23 +22,11 @@
   }
 }
 
-.hobbit {
-  display: none;
-  @include media(desktop) {
-    display: flex;
-    margin-right: -78px;
-    margin-top: -90px;
-    z-index: 988;
-    width: 181px;
-    height: fit-content;
-  }
-}
-
 .reviews-container {
   position: relative;
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;
+  // padding: 0 16px;
   display: flex;
   flex-direction: column;
 }
@@ -47,7 +34,7 @@
 .reviews-title {
   font-weight: 600;
   font-size: 32px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 24px;
 
   @include media(desktop) {
@@ -66,17 +53,15 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .review-item {
-  flex: 0 0 auto;
-  width: 246px;
+  box-sizing: border-box;
+  width: 205px;
   background: url('../img/reviews/review-backgr@2x.png') no-repeat center/cover;
-  background-size: 245px 206px;
-  padding: 20px 25px;
+  background-size: 245px 205px;
+  margin: 0;
+  padding: 25px 20px;
 
   .review-autor {
     display: flex;
@@ -92,14 +77,10 @@
     }
 
     .review-name {
-      font-weight: 600;
-      font-size: 16px;
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 15px;
       color: var(--black);
-      margin: 0;
-
-      @include media(desktop) {
-        font-size: 18px;
-      }
     }
   }
 
@@ -108,7 +89,7 @@
     gap: 4px;
     margin-bottom: 16px;
     list-style: none;
-    padding: 0;
+    padding-bottom: 16px;
     margin: 0;
 
     .review-star {
@@ -130,46 +111,43 @@
   }
 
   .review-text {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0;
-
-    @include media(desktop) {
-      font-size: 16px;
-    }
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--black);
   }
 }
 
 /* === SLIDER  === */
-
-.swiper-reviews {
-  position: relative;
-  overflow: hidden;
+.swiper[data-swiper='reviews'] {
   width: 100%;
-  max-width: 320px;
   margin: 0 auto;
-
-  @include media(desktop) {
-    max-width: 1200px;
-    width: 1200px;
-  }
+  overflow: visible;
 }
-
-.swiper-wrapper-reviews {
+.swiper[data-swiper='reviews'] .swiper-wrapper {
   display: flex;
 }
-
-.swiper-reviews .swiper-slide {
-  display: block !important;
-  box-sizing: border-box;
-  width: 100% !important;
-  max-width: 344px;
-  height: auto !important;
-  flex-shrink: 0;
+.swiper[data-swiper='reviews'] .swiper-slide {
+  flex: 0 0 auto;
+  width: 245px !important;
 }
-@media only screen and (min-width: 1220px) {
-  .swiper-reviews .swiper-slide {
-    max-width: 320px;
+
+@media (min-width: 1200px) {
+  .swiper[data-swiper='reviews'] {
+    overflow: visible;
+    width: auto;
+    max-width: none;
   }
+  .swiper[data-swiper='reviews'] .swiper-wrapper {
+    display: flex;
+    gap: 20px;
+    transform: none !important;
+  }
+  .swiper[data-swiper='reviews'] .swiper-slide {
+    width: 245px !important;
+  }
+}
+.swiper[data-swiper='reviews'] .review-item {
+  height: 206px !important;
+  box-sizing: border-box;
 }
