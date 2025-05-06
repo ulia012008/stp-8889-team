@@ -1,13 +1,16 @@
 import { mobileMenu } from './js/mobileMenu.js';
 import { handleCookieBanner } from './js/coocies.js';
+import { AccordionFaq } from './js/faq.js';
 import './js/characters';
 import './scss/styles.scss';
 import './js/reviews.js';
 import './js/gallery.js';
+
 // мобільне меню
 mobileMenu();
 // погодження cookies
 handleCookieBanner();
+
 // start >> кнопок переходу в Google Play
 const buttons = document.querySelectorAll('#play-btn, #google');
 
@@ -23,6 +26,9 @@ buttons.forEach(btn => {
 
 // start >> анімація гобліна Хоббіта
 document.addEventListener('DOMContentLoaded', () => {
+  // faq
+  AccordionFaq();
+
   const hobbit = document.querySelector('[data-hobbit]');
   if (!hobbit) return;
 

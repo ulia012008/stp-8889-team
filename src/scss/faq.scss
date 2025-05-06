@@ -1,0 +1,66 @@
+.faq-section {
+  background: #eae9e5;
+  //   padding: 20px 0;
+  padding-top: 120px;
+  padding-bottom: 40px;
+  h2 {
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--black);
+    margin-bottom: 32px;
+  }
+
+  [data-accordion-container] {
+    border: 1px solid var(--card-stroke);
+    border-radius: 20px;
+    padding: 20px 0px;
+    width: 280px;
+    height: auto;
+  }
+  [data-accordion-item] {
+    padding: 0px 16px;
+  }
+  [data-accordion-header] {
+    height: 52px;
+  }
+  [data-accordion-trigger] {
+    display: flex;
+    width: 248px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+
+    font-weight: 600;
+    font-size: 16px;
+    color: #22282b;
+  }
+  .open-arrow-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    transform: rotate(0deg);
+  }
+  .open-arrow-icon.rotated {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+  [data-accordion-panel] {
+    [data-accordion-content] {
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+  }
+
+  [data-accordion-panel] {
+    display: none;
+  }
+  [data-accordion-panel].open {
+    display: block;
+    padding-bottom: 20px;
+  }
+}
