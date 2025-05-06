@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (reviewsSwiper) return;
 
     reviewsSwiper = new Swiper('[data-swiper="reviews"]', {
-      direction: 'horizontal',
       loop: false,
       slidesPerView: 'auto',
       spaceBetween: 20,
