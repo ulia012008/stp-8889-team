@@ -1,6 +1,7 @@
 .reviews-section {
   position: relative;
   padding-bottom: 40px;
+  overflow: hidden;
 
   @include media(desktop) {
     padding-bottom: 80px;
@@ -52,13 +53,12 @@
 .reviews-list {
   display: flex;
   flex-direction: row;
-  gap: 20px;
 }
 
 .review-item {
   box-sizing: border-box;
   width: 205px;
-  background: url('../img/reviews/review-backgr@2x.png') no-repeat center/cover;
+  background: url('/img/reviews/review-backgr@2x.png') no-repeat center/cover;
   background-size: 245px 205px;
   margin: 0;
   padding: 25px 20px;
@@ -91,23 +91,6 @@
     list-style: none;
     padding-bottom: 16px;
     margin: 0;
-
-    .review-star {
-      font-size: 16px;
-      color: var(--gold);
-
-      &.review-star-filled {
-        color: var(--gold);
-      }
-
-      &:not(.review-star-filled) {
-        color: var(--small-text);
-      }
-
-      @include media(desktop) {
-        font-size: 20px;
-      }
-    }
   }
 
   .review-text {
@@ -121,6 +104,9 @@
 /* === SLIDER  === */
 .swiper[data-swiper='reviews'] {
   width: 100%;
+  // max-width: 100%;
+  // left: 50%
+  // transform; translateX(-50%);
   margin: 0 auto;
   overflow: visible;
 }
