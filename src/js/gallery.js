@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   new Swiper('[data-swiper="gallery"]', {
     modules: [Navigation, Pagination],
     slidesPerView: 1,
+    spaceBetween: 16,
+    slidesPerGroup: 1,
+
     loop: true,
     navigation: {
       nextEl: '.gallery-next',

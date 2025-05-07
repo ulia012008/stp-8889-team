@@ -66,19 +66,19 @@
       }
     }
 
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+    // img {
+    //   width: 100%;
+    //   height: auto;
+    //   display: block;
+    // }
 
-    @media (max-width: 1199px) {
-      width: 200px !important;
-    }
+    // @media (max-width: 1199px) {
+    //   width: 200px !important;
+    // }
 
-    @media (min-width: 1200px) {
-      width: 333px !important;
-    }
+    // @media (min-width: 1200px) {
+    //   width: 333px !important;
+    // }
   }
 
   .double-img {
@@ -139,5 +139,20 @@
     .swiper-pagination-bullet-active {
       background: #8c6955;
     }
+  }
+  picture {
+    display: block; /* Забирає зайвий відступ */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    /* За потреби */
+  }
+
+  picture img {
+    display: block; /* Забирає inline-пробіли */
+    width: 100%;
+    height: auto; /* Або задаєш висоту вручну */
+    object-fit: cover; /* За потреби */
   }
 }
