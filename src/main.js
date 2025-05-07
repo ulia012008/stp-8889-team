@@ -47,3 +47,38 @@ document.addEventListener('DOMContentLoaded', () => {
   observer.observe(hobbit);
 });
 // << end анімація гобліна Хоббіта
+
+// відео фрейм
+document.querySelectorAll('[data-video-preview]').forEach(preview => {
+  preview.addEventListener('click', function () {
+    const videoUrl = this.dataset.videoSrc + '?autoplay=1&enablejsapi=1';
+    const iframe = document.createElement('iframe');
+    iframe.src = videoUrl;
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute(
+      'allow',
+      'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+    );
+    iframe.style.position = 'absolute';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.top = '0';
+    iframe.style.left = '0';
+
+    const container = this.closest('[data-video-container]');
+    container.innerHTML = '';
+    container.appendChild(iframe);
+
+    // Создаём объект API для управления видео
+    const player = new YT.Player(iframe, {
+      events: {
+        onReady: function (event) {
+          // Можешь использовать event.target.playVideo() или pauseVideo()
+          event.target.pauseVideo();
+        },
+      },
+    });
+  });
+});
+// відео фрейм
