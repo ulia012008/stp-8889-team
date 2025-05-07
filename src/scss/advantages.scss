@@ -64,7 +64,7 @@
       justify-content: center; // по горизонталі
       align-items: center; // по вертикалі
       text-align: center;
-      border: 1px solid var(--highlighted-stroke);
+
       border-radius: 20px;
       padding: 16px 8px;
       width: 132px;
@@ -79,6 +79,7 @@
       &:nth-child(9) {
         background-color: var(--highlighted-bg);
         color: var(--light-text);
+        border: 1px solid var(--highlighted-stroke);
       }
 
       &:nth-child(2),
@@ -88,6 +89,7 @@
       &:nth-child(10) {
         background: var(--card-bg);
         color: var(--black);
+        border: 1px solid var(--card-stroke);
       }
 
       @include media(desktop) {
@@ -106,6 +108,7 @@
           grid-column: span 2;
           background-color: var(--highlighted-bg);
           color: var(--light-text);
+          border: 1px solid var(--highlighted-stroke);
         }
 
         &:nth-child(4) {
@@ -116,6 +119,7 @@
           grid-column: span 3;
           background: var(--card-bg);
           color: var(--black);
+          border: 1px solid var(--card-stroke);
         }
 
         &:nth-child(6) {
@@ -125,11 +129,13 @@
           grid-column: span 2;
           background-color: var(--highlighted-bg);
           color: var(--light-text);
+          border: 1px solid var(--highlighted-stroke);
         }
         &:nth-child(8) {
           grid-column: span 2;
           background: var(--card-bg);
           color: var(--black);
+          border: 1px solid var(--card-stroke);
         }
 
         &:nth-child(9) {
@@ -137,11 +143,13 @@
           margin-left: 178px;
           background: var(--card-bg);
           color: var(--black);
+          border: 1px solid var(--card-stroke);
         }
         &:nth-child(10) {
           grid-column: span 3;
           background-color: var(--highlighted-bg);
           color: var(--light-text);
+          border: 1px solid var(--highlighted-stroke);
         }
       }
       &:hover {
