@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       1200: {
         slidesPerView: 3,
         slidesPerGroup: 3,
-        loopedSlides: 18, //
+        loopedSlides: 20, //
         loopFillGroupWithBlank: true,
       },
     },
