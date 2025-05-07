@@ -4,6 +4,7 @@
   overflow: hidden;
 
   @include media(desktop) {
+    padding-top: 45px;
     padding-bottom: 80px;
   }
 

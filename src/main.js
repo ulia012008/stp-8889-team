@@ -10,6 +10,7 @@ import './js/gallery.js';
 mobileMenu();
 // погодження cookies
 handleCookieBanner();
+// initCharactersSwiper();
 
 // start >> кнопок переходу в Google Play
 const buttons = document.querySelectorAll('#play-btn, #google');
