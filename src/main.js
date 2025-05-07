@@ -7,6 +7,7 @@ import './js/gallery.js';
 
 mobileMenu();
 handleCookieBanner();
+// initCharactersSwiper();
 
 const buttons = document.querySelectorAll('#play-btn, #google');
 

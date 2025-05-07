@@ -1,157 +1,112 @@
-.gallery {
-  // position: relative;
+.gallery-section {
+  position: relative;
   padding-bottom: 40px;
   overflow: hidden;
+
   @include media(desktop) {
     padding-bottom: 80px;
   }
-}
-.gallery-container {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.gallery-title {
-  font-weight: 600;
-  font-size: 32px;
-  text-align: left;
-  margin-bottom: 24px;
 
-  @include media(desktop) {
-    font-size: 48px;
+  &-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 32px;
+      height: 32px;
+      background-color: #655959;
+      border-radius: 50%;
+      position: static;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .swiper-pagination {
+      position: static;
+      display: flex;
+      gap: 8px;
+
+      .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background: #b62e2e;
+        border-radius: 50%;
+        opacity: 1;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: #878080;
+      }
+    }
+  }
+
+  &-title {
+    font-weight: 600;
+    font-size: 32px;
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
+
+    @include media(desktop) {
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
   }
-}
 
-.gallery-list {
-  display: flex;
-  flex-direction: row;
-}
-
-.gallery-item {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.double-img {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  @include media(desktop) {
-    gap: 20px;
-  }
-}
-// kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-}
-
-@media (max-width: 1199px) {
-  .gallery-item {
-    width: 200px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .gallery-item {
-    width: 333px;
-  }
-}
-
-// kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-
-/* === SLIDER  === */
-.swiper[data-swiper='gallery'] {
-  width: 100%;
-  margin: 0 auto;
-  overflow: visible;
-}
-.swiper[data-swiper='gallery'] .swiper-wrapper {
-  display: flex;
-}
-.swiper[data-swiper='gallery'] .swiper-slide {
-  flex: 0 0 auto;
-  width: 200px !important;
-}
-
-@media (min-width: 1200px) {
-  .swiper[data-swiper='gallery'] {
-    overflow: visible;
-    width: 100%;
-    max-width: none;
-  }
-  .swiper[data-swiper='gallery'] .swiper-wrapper {
+  &-list {
     display: flex;
-    gap: 20px;
-    transform: none !important;
-  }
-  .swiper[data-swiper='gallery'] .swiper-slide {
-    width: 333px !important;
-  }
-}
-// .swiper[data-swiper='gallery'] .gallery-item {
-//   height: 333px !important;
-//   box-sizing: border-box;
-// }
-
-/* === BUTTONS and PAGINATION === */
-
-.gallery-controls {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 24px;
-  justify-content: flex-start;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  width: 32px;
-  height: 32px;
-  background-color: #655959;
-  border-radius: 50%;
-  position: static;
-  flex-shrink: 0;
-  cursor: pointer;
-
-  &::after {
-    font-size: 16px;
-    color: #333;
-  }
-}
-
-.swiper-pagination {
-  position: static;
-  display: flex;
-  gap: 8px;
-
-  .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    background: #b62e2e;
-    border-radius: 50%;
-    opacity: 1;
+    flex-direction: row;
   }
 
-  .swiper-pagination-bullet-active {
-    background: #878080;
-  }
-}
-
-.gallery-controls {
-  display: none;
-  @media (min-width: 1200px) {
+  &-item {
+    box-sizing: border-box;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .double-img {
+    display: flex;
+    flex-direction: column;
     gap: 16px;
-    margin-top: 24px;
-    justify-content: flex-start;
+
+    @include media(desktop) {
+      gap: 20px;
+    }
+  }
+
+  &-prev,
+  &-next,
+  &-pagination {
+    display: none;
+  }
+
+  @media (min-width: 1200px) {
+    &-prev,
+    &-next,
+    &-pagination {
+      display: block;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    &-item {
+      width: 200px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &-item {
+      width: 333px;
+    }
   }
 }
