@@ -7,7 +7,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 // Characters Swiper
 new Swiper('.characters-swiper', {
   modules: [Navigation, Pagination],
-  slidesPerView: 1,
+  slidesPerView: 2,
   loop: true,
   navigation: {
     nextEl: '.characters-next',
