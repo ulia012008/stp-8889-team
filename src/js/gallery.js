@@ -10,24 +10,24 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     spaceBetween: 16,
     slidesPerGroup: 1,
-
+    navigation: false,
+    pagination: false,
     loop: true,
-    navigation: {
-      nextEl: '.gallery-next',
-      prevEl: '.gallery-prev',
-      // nextButton: '#banner .swiper-button-next',
-      // prevButton: '#banner .swiper-button-prev',
-    },
-    pagination: {
-      el: '.gallery-pagination',
-      clickable: true,
-    },
+
     breakpoints: {
       1200: {
         slidesPerView: 3,
         slidesPerGroup: 3,
         loopedSlides: 20, //
         loopFillGroupWithBlank: true,
+      },
+      navigation: {
+        nextEl: '.gallery-next',
+        prevEl: '.gallery-prev',
+      },
+      pagination: {
+        el: '.gallery-pagination',
+        clickable: true,
       },
     },
   });

@@ -13,7 +13,6 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
   }
   .swiper {
     position: relative;
@@ -77,21 +76,20 @@
     }
   }
   .swiper-btn-gallery {
-    .swiper-btn-gallery {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      display: none;
-      align-items: center;
-      gap: 20px;
-      z-index: 10;
-      @media (min-width: 1200px) {
-        display: flex;
-      }
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: none;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+
+    @media (min-width: 1200px) {
+      display: flex;
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
+    .gallery-prev,
+    .gallery-next {
       width: 50px;
       height: 50px;
       border-radius: 50%;
@@ -100,7 +98,6 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      background-color: transparent;
 
       &::after {
         font-size: 14px;
