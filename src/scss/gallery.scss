@@ -15,7 +15,9 @@
     flex-direction: column;
     overflow: hidden;
   }
-
+  .swiper {
+    position: relative;
+  }
   .gallery-title {
     font-family: var(--font-family);
     font-weight: 600;
@@ -54,8 +56,8 @@
     @extend .swiper-slide;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: left;
     margin-right: 0;
 
     @media (min-width: 1200px) {
@@ -65,94 +67,78 @@
         margin-right: 0;
       }
     }
-
-    // img {
-    //   width: 100%;
-    //   height: auto;
-    //   display: block;
-    // }
-
-    // @media (max-width: 1199px) {
-    //   width: 200px !important;
-    // }
-
-    // @media (min-width: 1200px) {
-    //   width: 333px !important;
-    // }
   }
-
   .double-img {
     display: flex;
     flex-direction: column;
     gap: 16px;
-
     @media (min-width: 1200px) {
       gap: 20px;
     }
   }
-  .gallery-controls {
-    display: none;
-    @media (min-width: 1200px) {
-      display: flex;
-      justify-content: center;
+  .swiper-btn-gallery {
+    .swiper-btn-gallery {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      display: none;
       align-items: center;
-      gap: 24px;
-      margin-top: 20px;
-    }
-  }
-  .gallery-prev,
-  .gallery-next {
-    width: 50px;
-    height: 50px;
-    background-color: #655959;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-    svg {
-      width: 24px;
-      height: 24px;
-      stroke: var(--small-text);
-      fill: none;
-    }
-  }
-
-  .gallery-pagination {
-    display: none;
-
-    @media (min-width: 1200px) {
-      display: flex;
-      position: relative;
-      gap: 15px;
+      gap: 20px;
+      z-index: 10;
+      @media (min-width: 1200px) {
+        display: flex;
+      }
     }
 
-    .swiper-pagination-bullet {
-      width: 8px;
-      height: 8px;
-      background: #ab9f98;
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      opacity: 1;
+      border: 1.2px solid #ab9f98;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background-color: transparent;
+
+      &::after {
+        font-size: 14px;
+        color: #ab9f98;
+      }
+
+      .gallery-pagination {
+        display: none;
+
+        @media (min-width: 1200px) {
+          display: flex;
+          gap: 15px;
+        }
+
+        .swiper-pagination-bullet {
+          width: 8px;
+          height: 8px;
+          background: #ab9f98;
+          border-radius: 50%;
+          opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+          background: #8c6955;
+        }
+      }
     }
 
-    .swiper-pagination-bullet-active {
-      background: #8c6955;
+    picture {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
-  }
-  picture {
-    display: block; /* Забирає зайвий відступ */
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-
-    /* За потреби */
-  }
-
-  picture img {
-    display: block; /* Забирає inline-пробіли */
-    width: 100%;
-    height: auto; /* Або задаєш висоту вручну */
-    object-fit: cover; /* За потреби */
+    picture img {
+      display: block;
+      height: auto;
+      object-fit: cover;
+    }
   }
 }

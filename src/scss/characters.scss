@@ -222,3 +222,66 @@
     }
   }
 }
+// .swiper-btn-gallery {
+//     .swiper-btn-gallery {
+//       position: absolute;
+//       bottom: 10px;
+//       left: 10px;
+//       display: flex;
+//       align-items: center;
+//       gap: 20px;
+//       z-index: 10;
+//     }
+//   }
+
+//   .swiper-button-prev,
+//   .swiper-button-next {
+//     width: 50px;
+//     height: 50px;
+//     border-radius: 50%;
+//     border: 1.2px solid #ab9f98;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     cursor: pointer;
+//     background-color: transparent;
+
+//     &::after {
+//       font-size: 14px;
+//       color: #ab9f98;
+//     }
+
+//     .gallery-pagination {
+//       display: none;
+//       position: static;
+
+//       @media (min-width: 1200px) {
+//         display: flex;
+//         gap: 15px;
+//       }
+
+//       .swiper-pagination-bullet {
+//         width: 8px;
+//         height: 8px;
+//         background: #ab9f98;
+//         border-radius: 50%;
+//         opacity: 1;
+//       }
+
+//       .swiper-pagination-bullet-active {
+//         background: #8c6955;
+//       }
+//     }
+//   }
+
+//   picture {
+//     display: block;
+//     width: 100%;
+//     height: auto;
+//     object-fit: cover;
+//   }
+//   picture img {
+//     display: block;
+//     height: auto;
+//     object-fit: cover;
+//   }

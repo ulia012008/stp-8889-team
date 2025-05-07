@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     navigation: {
       nextEl: '.gallery-next',
       prevEl: '.gallery-prev',
+      // nextButton: '#banner .swiper-button-next',
+      // prevButton: '#banner .swiper-button-prev',
     },
     pagination: {
       el: '.gallery-pagination',
