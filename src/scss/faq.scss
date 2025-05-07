@@ -48,7 +48,7 @@
       background-color: transparent;
       border: none;
       padding: 0;
-      height: 52px;
+
       font-family: var(--font-family);
       font-weight: 600;
       font-size: 16px;
@@ -59,10 +59,10 @@
       }
     }
     .open-arrow-icon {
-      margin: 0;
       transform: rotate(90deg);
       fill: var(--text);
       transition: transform 0.8s ease;
+      align-self: start;
     }
     .open-arrow-icon.rotated {
       transform: rotate(270deg);
