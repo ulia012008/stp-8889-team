@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     loop: true,
     spaceBetween: 16,
+    // navigationDisabledClass: 'swiper-navigation-disabled',
 
     navigation: isDesktop
       ? {
