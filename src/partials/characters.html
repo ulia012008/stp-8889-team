@@ -1,9 +1,10 @@
 <section class="characters section" id="characters">
   <div class="characters-container container">
     <h2>Characters</h2>
+
     <div data-swiper="characters" class="swiper characters-swiper">
-      <ul class="swiper-wrapper characters-list">
-        <li class="swiper-slide characters-card">
+      <div class="swiper-wrapper characters-list">
+        <div class="swiper-slide characters-card">
           <figure class="characters-img">
             <picture>
               <source
@@ -22,25 +23,19 @@
               />
               <img
                 src="/img/characters/hero-5@2x.png"
-                srcset="
-                  /img/characters/hero-5-mob.png     600w,
-                  /img/characters/hero-5-mob@2x.png 1200w,
-                  /img/characters/hero-5.png         800w,
-                  /img/characters/hero-5@2x.png     1600w
-                "
-                sizes="(max-width: 1199px) 280px, 295px"
-                alt="Portrait of Aelira, the Celestial Guide, an ancient ethereal being who sees the threads of fate."
+                alt="Portrait of Aelira"
                 loading="lazy"
               />
             </picture>
             <h3>Aelira</h3>
             <p>
-              The Celestial Guide: An ancient, ethereal being who sees the
-              threads of fate. She becomes your mentor and link to Mytherra.
+              The Celestial Guide: An ancient being who sees the threads of
+              fate.
             </p>
           </figure>
-        </li>
-        <li class="swiper-slide characters-card">
+        </div>
+
+        <div class="swiper-slide characters-card">
           <figure class="characters-img">
             <picture>
               <source
@@ -59,25 +54,16 @@
               />
               <img
                 src="/img/characters/hero-1@2x.png"
-                srcset="
-                  /img/characters/hero-1-mob.png     600w,
-                  /img/characters/hero-1-mob@2x.png 1200w,
-                  /img/characters/hero-1.png         800w,
-                  /img/characters/hero-1@2x.png     1600w
-                "
-                sizes="(max-width: 1199px) 280px, 295px"
-                alt="about-me"
+                alt="Korran the Flame-Walker"
                 loading="lazy"
               />
             </picture>
             <h3>Korran the Flame-Walker</h3>
-            <p>
-              A fierce elemental warrior forged from volcanic myths, wielding
-              explosive fire-based skills.
-            </p>
+            <p>A fierce elemental warrior forged from volcanic myths.</p>
           </figure>
-        </li>
-        <li class="swiper-slide characters-card">
+        </div>
+
+        <div class="swiper-slide characters-card">
           <figure class="characters-img">
             <picture>
               <source
@@ -96,25 +82,16 @@
               />
               <img
                 src="/img/characters/hero-2@2x.png"
-                srcset="
-                  /img/characters/hero-2-mob.png     600w,
-                  /img/characters/hero-2-mob@2x.png 1200w,
-                  /img/characters/hero-2.png         800w,
-                  /img/characters/hero-2@2x.png     1600w
-                "
-                sizes="(max-width: 1199px) 280px, 295px"
-                alt="Illustration of Seren of the Grove, the ancient forest's protective spirit and healer"
+                alt="Seren of the Grove"
                 loading="lazy"
               />
             </picture>
             <h3>Seren of the Grove</h3>
-            <p>
-              A guardian spirit tied to ancient forests, skilled in healing and
-              protective enchantments.
-            </p>
+            <p>A guardian spirit tied to ancient forests.</p>
           </figure>
-        </li>
-        <li class="swiper-slide characters-card">
+        </div>
+
+        <div class="swiper-slide characters-card">
           <figure class="characters-img">
             <picture>
               <source
@@ -133,25 +110,16 @@
               />
               <img
                 src="/img/characters/hero-3@2x.png"
-                srcset="
-                  /img/characters/hero-3-mob.png     600w,
-                  /img/characters/hero-3-mob@2x.png 1200w,
-                  /img/characters/hero-3.png         800w,
-                  /img/characters/hero-3@2x.png     1600w
-                "
-                sizes="(max-width: 1199px) 280px, 295px"
-                alt="Portrait of Thorne Wyrmblade, the fallen Norse knight emerging from shadow for redemption"
+                alt="Thorne Wyrmblade"
                 loading="lazy"
               />
             </picture>
             <h3>Thorne Wyrmblade</h3>
-            <p>
-              A cursed knight from Norse legend, once lost to shadow, now
-              fighting for redemption.
-            </p>
+            <p>A cursed knight from Norse legend seeking redemption.</p>
           </figure>
-        </li>
-        <li class="swiper-slide characters-card">
+        </div>
+
+        <div class="swiper-slide characters-card">
           <figure class="characters-img">
             <picture>
               <source
@@ -170,185 +138,25 @@
               />
               <img
                 src="/img/characters/hero-4@2x.png"
-                srcset="
-                  /img/characters/hero-4-mob.png     600w,
-                  /img/characters/hero-4-mob@2x.png 1200w,
-                  /img/characters/hero-4.png         800w,
-                  /img/characters/hero-4@2x.png     1600w
-                "
-                sizes="(max-width: 1199px) 280px, 295px"
-                alt="Portrait of Veyra the Sky-Seer, a storm-wielding prophetess foreseeing cosmic upheavals"
+                alt="Veyra the Sky-Seer"
                 loading="lazy"
               />
             </picture>
             <h3>Veyra the Sky-Seer</h3>
             <p>A prophetess with storm powers who foresees cosmic upheavals.</p>
           </figure>
-        </li>
-      </ul>
-      <div class="characters-co">
-        <div class="swiper-button-prev characters-prev"></div>
-        <div class="swiper-button-next characters-next"></div>
-        <div class="swiper-pagination characters-pagination"></div>
+        </div>
+      </div>
+
+      <div class="caracters-controls">
+        <div class="swiper-button-prev caracters-prev">
+          <svg><use xlink:href="/img/sprite.svg#arrow" /></svg>
+        </div>
+        <div class="swiper-pagination caracters-pagination"></div>
+        <div class="swiper-button-next caracters-next">
+          <svg><use xlink:href="/img/sprite.svg#arrow" /></svg>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- 888888888888888888888888888888888888888888888888888888888888 -->
-<!-- <div class="swiper-wrapper characters-wrapper">
-    <swiper-container class="characters-swiper" data-swiper="characters">
-      
-        <swiper-slide class="characters-card">
-          
-        </swiper-slide>
-        <swiper-slide class="characters-card">
-          <figure class="characters-img">
-            <picture>
-              <source
-                srcset="
-                  /img/characters/hero-1-mob.png    1x,
-                  /img/characters/hero-1-mob@2x.png 2x
-                "
-                media="(max-width: 1199px)"
-              />
-              <source
-                srcset="
-                  /img/characters/hero-1.png    1x,
-                  /img/characters/hero-1@2x.png 2x
-                "
-                media="(min-width: 1200px)"
-              />
-              <img
-                src="/img/characters/hero-1@2x.png"
-                srcset="
-                  /img/characters/hero-1-mob.png     600w,
-                  /img/characters/hero-1-mob@2x.png 1200w,
-                  /img/characters/hero-1.png         800w,
-                  /img/characters/hero-1@2x.png     1600w
-                "
-                sizes="(max-width: 1199px) 280px, 295px"
-                alt="about-me"
-                loading="lazy"
-              />
-            </picture>
-            <h3>Korran the Flame-Walker</h3>
-            <p>
-              A fierce elemental warrior forged from volcanic myths, wielding
-              explosive fire-based skills.
-            </p>
-          </figure>
-        </swiper-slide>
-        <swiper-slide class="characters-card">
-          <figure class="characters-img">
-            <picture>
-              <source
-                srcset="
-                  /img/characters/hero-2-mob.png    1x,
-                  /img/characters/hero-2-mob@2x.png 2x
-                "
-                media="(max-width: 1199px)"
-              />
-              <source
-                srcset="
-                  /img/characters/hero-2.png    1x,
-                  /img/characters/hero-2@2x.png 2x
-                "
-                media="(min-width: 1200px)"
-              />
-              <img
-                src="/img/characters/hero-2@2x.png"
-                srcset="
-                  /img/characters/hero-2-mob.png     600w,
-                  /img/characters/hero-2-mob@2x.png 1200w,
-                  /img/characters/hero-2.png         800w,
-                  /img/characters/hero-2@2x.png     1600w
-                "
-                sizes="(max-width: 1199px) 280px, 295px"
-                alt="Illustration of Seren of the Grove, the ancient forest's protective spirit and healer"
-                loading="lazy"
-              />
-            </picture>
-            <h3>Seren of the Grove</h3>
-            <p>
-              A guardian spirit tied to ancient forests, skilled in healing and
-              protective enchantments.
-            </p>
-          </figure>
-        </swiper-slide>
-        <swiper-slide class="characters-card">
-          <figure class="characters-img">
-            <picture>
-              <source
-                srcset="
-                  /img/characters/hero-3-mob.png    1x,
-                  /img/characters/hero-3-mob@2x.png 2x
-                "
-                media="(max-width: 1199px)"
-              />
-              <source
-                srcset="
-                  /img/characters/hero-3.png    1x,
-                  /img/characters/hero-3@2x.png 2x
-                "
-                media="(min-width: 1200px)"
-              />
-              <img
-                src="/img/characters/hero-3@2x.png"
-                srcset="
-                  /img/characters/hero-3-mob.png     600w,
-                  /img/characters/hero-3-mob@2x.png 1200w,
-                  /img/characters/hero-3.png         800w,
-                  /img/characters/hero-3@2x.png     1600w
-                "
-                sizes="(max-width: 1199px) 280px, 295px"
-                alt="Portrait of Thorne Wyrmblade, the fallen Norse knight emerging from shadow for redemption"
-                loading="lazy"
-              />
-            </picture>
-            <h3>Thorne Wyrmblade</h3>
-            <p>
-              A cursed knight from Norse legend, once lost to shadow, now
-              fighting for redemption.
-            </p>
-          </figure>
-        </swiper-slide>
-        <swiper-slide class="characters-card">
-          <figure class="characters-img">
-            <picture>
-              <source
-                srcset="
-                  /img/characters/hero-4-mob.png    1x,
-                  /img/characters/hero-4-mob@2x.png 2x
-                "
-                media="(max-width: 1199px)"
-              />
-              <source
-                srcset="
-                  /img/characters/hero-4.png    1x,
-                  /img/characters/hero-4@2x.png 2x
-                "
-                media="(min-width: 1200px)"
-              />
-              <img
-                src="/img/characters/hero-4@2x.png"
-                srcset="
-                  /img/characters/hero-4-mob.png     600w,
-                  /img/characters/hero-4-mob@2x.png 1200w,
-                  /img/characters/hero-4.png         800w,
-                  /img/characters/hero-4@2x.png     1600w
-                "
-                sizes="(max-width: 1199px) 280px, 295px"
-                alt="Portrait of Veyra the Sky-Seer, a storm-wielding prophetess foreseeing cosmic upheavals"
-                loading="lazy"
-              />
-            </picture>
-            <h3>Veyra the Sky-Seer</h3>
-            <p>A prophetess with storm powers who foresees cosmic upheavals.</p>
-          </figure>
-        </swiper-slide>
-      </div>
-    </swiper-container>
-  </div>
-  </div>
-</section> -->
