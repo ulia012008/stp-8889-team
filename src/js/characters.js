@@ -10,25 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('[data-swiper="characters"]', {
     modules: [Navigation, Pagination],
     slidesPerView: 1,
+    centeredSlides: true, // ← ДОДАЛИ ТУТ
     loop: true,
     spaceBetween: 16,
     navigation: isDesktop
-      ? {
-          nextEl: '.characters-next',
-          prevEl: '.characters-prev',
-        }
+      ? { nextEl: '.characters-next', prevEl: '.characters-prev' }
       : undefined,
-
     pagination: isDesktop
-      ? {
-          el: '.characters-pagination',
-          clickable: true,
-        }
+      ? { el: '.characters-pagination', clickable: true }
       : undefined,
-
     breakpoints: {
       1200: {
-        centeredSlides: true,
         slidesPerView: 3,
         spaceBetween: 20,
       },
