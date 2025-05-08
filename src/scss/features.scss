@@ -66,19 +66,12 @@
         color: var(--black);
         background-image: url('/img/features/features-1_mob.png');
         background-position: center;
-        // для 1, 3, 5, 7
-        // @include media(desktop) {
-        //   background-image: url('../img/features/features-1.png');
-        // }
       }
 
       &:nth-child(even) {
         color: var(--light-text);
         background-image: url('/img/features/features-2_mob.png');
-        background-position: center; // для 2, 4, 6, 8
-        // @include media(desktop) {
-        //   background-image: url('../img/features/features-2.png');
-        // }
+        background-position: center;
       }
       @include media(desktop) {
         &:nth-child(1),
