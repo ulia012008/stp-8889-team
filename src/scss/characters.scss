@@ -1,11 +1,35 @@
 .characters-content {
+  .swiper-wrapper,
+  .swiper-slide {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+  .swiper-wrapper {
+    transform: translate3d(0, 0, 0);
+  }
+
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
+
   @include media(desktop) {
     padding: 0 60px;
+
+    .swiper-slide-active .characters-card {
+      max-width: 576px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide-active .characters-card h3,
+    .swiper-slide-active .characters-card p {
+      max-width: 576px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   .swiper {
@@ -39,7 +63,7 @@
       font-size: 24px;
       text-align: center;
       color: var(--black);
-      margin-bottom: 12px;
+      // margin-bottom: 12px;
     }
 
     p {
@@ -116,7 +140,6 @@
   }
 
   @include media(desktop) {
-    /* Scale images instead of entire card to avoid blur */
     .swiper-slide .characters-card img {
       transform: scale(0.85);
       opacity: 0.6;
@@ -130,8 +153,6 @@
       transform: scale(0.6);
       opacity: 0.8;
     }
-
-    /* Hide text only on previous and next slides */
     .swiper-slide-prev h3,
     .swiper-slide-prev p,
     .swiper-slide-next h3,
@@ -139,7 +160,6 @@
       display: none;
     }
 
-    /* Navigation ::part styling */
     ::part(navigation-button-prev),
     ::part(navigation-button-next) {
       width: 44px;
