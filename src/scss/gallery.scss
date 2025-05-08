@@ -1,3 +1,4 @@
+// gallery.scss
 .gallery-section {
   position: relative;
   padding-bottom: 40px;
@@ -6,9 +7,8 @@
   @media (min-width: 1200px) {
     padding-bottom: 80px;
   }
-  .gallery-container {
-    position: relative;
 
+  .gallery-container {
     &-container {
       position: relative;
       max-width: 1200px;
@@ -16,9 +16,7 @@
       display: flex;
       flex-direction: column;
     }
-    .swiper {
-      position: relative;
-    }
+
     .gallery-title {
       font-family: var(--font-family);
       font-weight: 600;
@@ -46,10 +44,10 @@
       @extend .swiper-wrapper;
       display: flex;
       flex-direction: row;
-      gap: 16px;
-
+      // Remove gap on mobile to avoid large spacing
+      gap: 0;
       @media (min-width: 1200px) {
-        gap: 0;
+        gap: 16px;
       }
     }
 
@@ -69,6 +67,7 @@
         }
       }
     }
+
     .double-img {
       display: flex;
       flex-direction: column;
@@ -76,14 +75,28 @@
       @media (min-width: 1200px) {
         gap: 20px;
       }
+
+      picture {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+
+        img {
+          display: block;
+          height: auto;
+          object-fit: cover;
+        }
+      }
     }
+
     .gallery-controls {
       display: none;
-      @include media(desktop) {
+      @media (min-width: 1200px) {
         display: flex;
+        position: relative;
         align-items: center;
-        justify-content: flex-start;
-        gap: 16px;
+        justify-content: center; /* центруємо пагінацію */
         margin-top: 24px;
       }
 
@@ -93,39 +106,83 @@
         height: 50px;
         border: 2px solid #ab9f98;
         border-radius: 50%;
-        font-size: 18px;
-        color: #ab9f98;
         background: none;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         z-index: 10;
-
-        &:hover {
-          color: #8c6955;
-          border-color: #8c6955;
+        position: absolute; /* позиціонуємо кнопки */
+      }
+      @media (min-width: 1200px) {
+        .gallery-prev {
+          left: 0; /* ліворуч */
+        }
+        .gallery-next {
+          right: 0; /* праворуч */
         }
       }
 
-      .gallery-prev::after {
-        content: '‹';
-        font-size: 50px;
-        line-height: 1;
-      }
-
-      .gallery-next::after {
-        content: '›';
-        font-size: 50px;
-        line-height: 1;
-      }
-
       .gallery-pagination {
-        display: flex;
-        gap: 4px;
-        align-items: center;
-        width: 77px;
+        display: none;
+        @media (min-width: 1200px) {
+          display: flex; /* робимо видимою на десктопі */
+          gap: 4px;
+          align-items: center;
+          margin: 0 auto; /* центруємо між кнопками */
+        }
+
+        .swiper-pagination-bullet {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: #ab9f98;
+          opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+          background-color: #8c6955;
+        }
       }
+    }
+    .gallery-prev,
+    .gallery-next {
+      width: 50px;
+      height: 50px;
+      border: 2px solid #ab9f98;
+      border-radius: 50%;
+      font-size: 18px;
+      color: #ab9f98;
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+
+      &:hover {
+        color: #8c6955;
+        border-color: #8c6955;
+      }
+    }
+
+    .gallery-prev::after {
+      content: '‹';
+      font-size: 50px;
+      line-height: 1;
+    }
+
+    .gallery-next::after {
+      content: '›';
+      font-size: 50px;
+      line-height: 1;
+    }
+
+    .gallery-pagination {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      width: 77px;
 
       .swiper-pagination-bullet {
         width: 8px;
@@ -141,15 +198,3 @@
     }
   }
 }
-
-//  picture {
-//         display: block;
-//         width: 100%;
-//         height: auto;
-//         object-fit: cover;
-//       }
-//       picture img {
-//         display: block;
-//         height: auto;
-//         object-fit: cover;
-//       }

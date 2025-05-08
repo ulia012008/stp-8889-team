@@ -12,16 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     spaceBetween: 16,
 
     navigation: {
-      nextEl: '[data-swiper-button-next]',
-      prevEl: '[data-swiper-button-prev]',
+      prevEl: '.gallery-prev',
+      nextEl: '.gallery-next',
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-    },
-
     pagination: {
-      el: '[data-swiper-pagination]',
+      el: '.gallery-pagination',
       clickable: true,
     },
 
