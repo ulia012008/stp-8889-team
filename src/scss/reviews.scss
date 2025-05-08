@@ -99,13 +99,8 @@
     color: var(--black);
   }
 }
-
-/* === SLIDER  === */
 .swiper[data-swiper='reviews'] {
   width: 100%;
-  // max-width: 100%;
-  // left: 50%
-  // transform; translateX(-50%);
   margin: 0 auto;
   overflow: visible;
 }
@@ -114,7 +109,7 @@
 }
 .swiper[data-swiper='reviews'] .swiper-slide {
   flex: 0 0 auto;
-  width: 245px !important;
+  width: 245px;
 }
 
 @media (min-width: 1200px) {
@@ -126,13 +121,13 @@
   .swiper[data-swiper='reviews'] .swiper-wrapper {
     display: flex;
     gap: 20px;
-    transform: none !important;
+    transform: none;
   }
   .swiper[data-swiper='reviews'] .swiper-slide {
-    width: 245px !important;
+    width: 245px;
   }
 }
 .swiper[data-swiper='reviews'] .review-item {
-  height: 206px !important;
+  height: 206px;
   box-sizing: border-box;
 }

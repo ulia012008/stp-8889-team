@@ -1,10 +1,10 @@
 [data-go-home] {
-  display: none; // приховати всюди
+  display: none; 
 
   body[data-page='privacy'] &,
   body[data-page='terms'] &,
   body[data-page='cookies'] & {
-    display: flex; // показати лише на цих сторінках
+    display: flex; 
   }
 
   align-items: center;
