@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: '[data-swiper-button-next]',
       prevEl: '[data-swiper-button-prev]',
     },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
 
     pagination: {
       el: '[data-swiper-pagination]',
