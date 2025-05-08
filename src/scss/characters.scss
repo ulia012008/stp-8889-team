@@ -12,7 +12,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 0;
 
   @include media(desktop) {
@@ -62,8 +62,6 @@
       font-weight: 600;
       font-size: 24px;
       text-align: center;
-      color: var(--black);
-      // margin-bottom: 12px;
     }
 
     p {
@@ -165,8 +163,8 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: white;
-      border: 1px solid var(--black);
+      background: none;
+      border: 2px solid #ab9f98;
       display: flex;
       align-items: center;
       justify-content: center;
