@@ -77,68 +77,79 @@
         gap: 20px;
       }
     }
-    .swiper-btn-gallery {
+    .gallery-controls {
       display: none;
-
-      @media (min-width: 1200px) {
+      @include media(desktop) {
         display: flex;
-        position: absolute;
-        transform: translateY(100%);
-        bottom: 10px;
-        left: 10px;
         align-items: center;
-        gap: 20px;
-        z-index: 10;
+        justify-content: flex-start;
+        gap: 16px;
+        margin-top: 24px;
       }
 
       .gallery-prev,
       .gallery-next {
         width: 50px;
         height: 50px;
+        border: 2px solid #ab9f98;
         border-radius: 50%;
-        border: 1.23px solid #ab9f98;
+        font-size: 18px;
+        color: #ab9f98;
+        background: none;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        &::after {
-          font-size: 14px;
-          color: #ab9f98;
-        }
+        z-index: 10;
 
-        .gallery-pagination {
-          display: none;
-
-          @media (min-width: 1200px) {
-            display: flex;
-            gap: 15px;
-          }
-
-          .swiper-pagination-bullet {
-            width: 8px;
-            height: 8px;
-            background: #ab9f98;
-            border-radius: 50%;
-            opacity: 1;
-          }
-
-          .swiper-pagination-bullet-active {
-            background: #8c6955;
-          }
+        &:hover {
+          color: #8c6955;
+          border-color: #8c6955;
         }
       }
 
-      picture {
-        display: block;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
+      .gallery-prev::after {
+        content: '‹';
+        font-size: 50px;
+        line-height: 1;
       }
-      picture img {
-        display: block;
-        height: auto;
-        object-fit: cover;
+
+      .gallery-next::after {
+        content: '›';
+        font-size: 50px;
+        line-height: 1;
+      }
+
+      .gallery-pagination {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        width: 77px;
+      }
+
+      .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ab9f98;
+        opacity: 1;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #8c6955;
       }
     }
   }
 }
+
+//  picture {
+//         display: block;
+//         width: 100%;
+//         height: auto;
+//         object-fit: cover;
+//       }
+//       picture img {
+//         display: block;
+//         height: auto;
+//         object-fit: cover;
+//       }
