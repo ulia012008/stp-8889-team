@@ -7,7 +7,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 document.addEventListener('DOMContentLoaded', () => {
   new Swiper('[data-swiper="gallery"]', {
     modules: [Navigation, Pagination],
-    slidesPerView: 1,
+    slidesPerView: 1.32,
     loop: true,
     spaceBetween: 16,
 

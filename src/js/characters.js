@@ -7,25 +7,35 @@ import { Navigation, Pagination } from 'swiper/modules';
 document.addEventListener('DOMContentLoaded', () => {
   const isDesktop = window.innerWidth >= 1200;
 
-  const swiper = new Swiper('[data-swiper="characters"]', {
-    modules: [Navigation, Pagination],
+  const modules = [Navigation];
+  const options = {
+    modules,
     slidesPerView: 1,
-    centeredSlides: true, // ← ДОДАЛИ ТУТ
+    centeredSlides: true,
     loop: true,
     spaceBetween: 16,
-    navigation: isDesktop
-      ? { nextEl: '.characters-next', prevEl: '.characters-prev' }
-      : undefined,
-    pagination: isDesktop
-      ? { el: '.characters-pagination', clickable: true }
-      : undefined,
     breakpoints: {
       1200: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
     },
-  });
+  };
+
+  if (isDesktop) {
+    modules.push(Pagination);
+    options.navigation = {
+      nextEl: '.characters-next',
+      prevEl: '.characters-prev',
+    };
+    options.pagination = {
+      el: '.characters-pagination',
+      clickable: true,
+    };
+  }
+
+  const swiper = new Swiper('[data-swiper="characters"]', options);
+
   const updateSlideCaptions = swiper => {
     const isDesktop = window.innerWidth >= 1200;
     swiper.slides.forEach(slide => {
@@ -43,4 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   };
+
+  swiper.on('slideChange', () => updateSlideCaptions(swiper));
+  updateSlideCaptions(swiper);
 });
