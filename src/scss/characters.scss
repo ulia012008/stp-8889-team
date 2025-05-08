@@ -7,18 +7,40 @@
   @include media(desktop) {
     padding: 0 60px;
   }
-  li {
-    margin: 0;
-    max-width: 295px;
+
+  .swiper {
+    &-slide {
+      display: flex;
+      justify-content: center;
+    }
   }
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-  }
+
   .characters-card {
     max-width: 220px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include media(desktop) {
+      gap: 20px;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 24px;
+      text-align: center;
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: -0.02em;
+      color: var(--small-text);
+    }
   }
+
   .characters-prev,
   .characters-next {
     display: none;
@@ -30,7 +52,7 @@
       z-index: 10;
       background: none;
       border: 2px solid #ab9f98;
-      border-radius: 50%; // круглая рамка
+      border-radius: 50%;
       padding: 10px;
       width: 50px;
       height: 50px;
@@ -41,16 +63,24 @@
       &:hover {
         color: #8c6955;
       }
-    }
 
-    .characters-prev {
-      left: 10px;
-    }
+      &.characters-prev {
+        left: 10px;
+      }
+      &.characters-next {
+        right: 10px;
+      }
 
-    .characters-next {
-      right: 10px;
+      &::after {
+        font-size: 20px;
+        color: #ab9f98;
+        line-height: 1;
+        display: block;
+        text-align: center;
+      }
     }
   }
+
   .characters-pagination {
     display: none;
     @include media(desktop) {
@@ -60,30 +90,64 @@
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
-      display: flex;
       justify-content: center;
       gap: 8px;
-    }
 
-    .swiper-pagination-bullet {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: #ab9f98;
-      opacity: 1;
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color: #8c6955;
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ab9f98;
+        opacity: 1;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: #8c6955;
+      }
     }
   }
-  .characters-prev::after,
-  .characters-next::after {
-    font-size: 20px; // устанавливает реальный размер символа
-    color: #ab9f98;
-    line-height: 1;
-    display: block;
-    text-align: center;
+
+  @include media(desktop) {
+    .swiper-slide .characters-card {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      transform: scale(0.85);
+      opacity: 0.6;
+    }
+    .swiper-slide-active .characters-card {
+      transform: scale(1);
+      opacity: 1;
+    }
+    .swiper-slide-prev .characters-card,
+    .swiper-slide-next .characters-card {
+      transform: scale(0.6);
+      opacity: 0.8;
+    }
+
+    /* Hide text only on previous and next slides */
+    .swiper-slide-prev .text h3,
+    .swiper-slide-prev .text p,
+    .swiper-slide-next .text h3,
+    .swiper-slide-next .text p {
+      display: none;
+    }
+
+    /* Navigation ::part styling */
+    ::part(navigation-button-prev),
+    ::part(navigation-button-next) {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: white;
+      border: 1px solid var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    ::part(navigation-button-prev) {
+      left: calc(50% - (((100% / 3) / 2) + 143px) - 88px);
+    }
+    ::part(navigation-button-next) {
+      right: calc(50% - (((100% / 3) / 2) + 143px) - 88px);
+    }
   }
 }
 
@@ -95,46 +159,5 @@ h2 {
   @media (min-width: 1200px) {
     font-size: 48px;
     margin-bottom: 40px;
-  }
-}
-
-@include media(desktop) {
-  .swiper-slide .characters-card {
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    transform: scale(0.85);
-    opacity: 0.6;
-  }
-
-  .swiper-slide-active .characters-card {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  .swiper-slide-prev .characters-card,
-  .swiper-slide-next .characters-card {
-    transform: scale(0.6);
-    opacity: 0.8;
-  }
-}
-
-.characters-card {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  @include media(desktop) {
-    gap: 20px;
-  }
-  h4 {
-    font-weight: 600;
-    font-size: 24px;
-    text-align: center;
-    color: var(--black);
-    margin-bottom: 12px;
-  }
-  p {
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    color: var(--small-text);
   }
 }
