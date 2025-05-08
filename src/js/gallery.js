@@ -5,26 +5,34 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('[data-swiper="gallery"]', {
-    modules: [Navigation, Pagination],
+  const isDesktop = window.innerWidth >= 1200;
+
+  const modules = [Navigation];
+  const options = {
+    modules,
     slidesPerView: 1.32,
     loop: true,
     spaceBetween: 16,
-
-    navigation: {
-      prevEl: '.gallery-prev',
-      nextEl: '.gallery-next',
-    },
-    pagination: {
-      el: '.gallery-pagination',
-      clickable: true,
-    },
-
     breakpoints: {
       1200: {
         slidesPerView: 3,
+        slidesPerGroup: 3,
         spaceBetween: 20,
       },
     },
-  });
+  };
+
+  if (isDesktop) {
+    modules.push(Pagination);
+    options.navigation = {
+      prevEl: '[data-swiper-button-prev="gallery-prev"]',
+      nextEl: '[data-swiper-button-next="gallery-next"]',
+    };
+    options.pagination = {
+      el: '[data-swiper-pagination="gallery-pagination"]',
+      clickable: true,
+    };
+  }
+
+  const swiper = new Swiper('[data-swiper="gallery"]', options);
 });
