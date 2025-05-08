@@ -25,6 +25,15 @@
       gap: 20px;
     }
 
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      will-change: transform;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
     h3 {
       font-weight: 600;
       font-size: 24px;
@@ -107,26 +116,26 @@
   }
 
   @include media(desktop) {
-    .swiper-slide .characters-card {
-      transition: transform 0.4s ease, opacity 0.4s ease;
+    /* Scale images instead of entire card to avoid blur */
+    .swiper-slide .characters-card img {
       transform: scale(0.85);
       opacity: 0.6;
     }
-    .swiper-slide-active .characters-card {
+    .swiper-slide-active .characters-card img {
       transform: scale(1);
       opacity: 1;
     }
-    .swiper-slide-prev .characters-card,
-    .swiper-slide-next .characters-card {
+    .swiper-slide-prev .characters-card img,
+    .swiper-slide-next .characters-card img {
       transform: scale(0.6);
       opacity: 0.8;
     }
 
     /* Hide text only on previous and next slides */
-    .swiper-slide-prev .text h3,
-    .swiper-slide-prev .text p,
-    .swiper-slide-next .text h3,
-    .swiper-slide-next .text p {
+    .swiper-slide-prev h3,
+    .swiper-slide-prev p,
+    .swiper-slide-next h3,
+    .swiper-slide-next p {
       display: none;
     }
 
