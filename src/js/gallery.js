@@ -7,6 +7,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 document.addEventListener('DOMContentLoaded', () => {
   new Swiper('[data-swiper="gallery"]', {
     modules: [Navigation, Pagination],
+    spaceBetween: 16,
     slidesPerView: 1,
     spaceBetween: 16,
     slidesPerGroup: 1,
@@ -19,15 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 3,
         slidesPerGroup: 3,
         loopedSlides: 20, //
-        loopFillGroupWithBlank: true,
-      },
-      navigation: {
-        nextEl: '.gallery-next',
-        prevEl: '.gallery-prev',
-      },
-      pagination: {
-        el: '.gallery-pagination',
-        clickable: true,
+        // loopFillGroupWithBlank: true,
+        navigation: {
+          nextEl: '.gallery-next',
+          prevEl: '.gallery-prev',
+        },
+        pagination: {
+          el: '.gallery-pagination',
+          clickable: true,
+        },
       },
     },
   });
