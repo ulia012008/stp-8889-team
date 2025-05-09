@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modules = [Navigation];
   const options = {
     modules,
-    allowTouchMove: true
+    allowTouchMove: true,
     slidesPerView: 1,
     centeredSlides: true,
     loop: true,
