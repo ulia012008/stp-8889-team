@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modules = [Navigation];
   const options = {
     modules,
+    allowTouchMove: true
     slidesPerView: 1,
     centeredSlides: true,
     loop: true,
@@ -25,11 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (isDesktop) {
     modules.push(Pagination);
     options.navigation = {
-      nextEl: '.characters-next',
-      prevEl: '.characters-prev',
+      prevEl: '[data-swiper-button-prev="characters-prev"]',
+      nextEl: '[data-swiper-button-next="characters-next"]',
     };
     options.pagination = {
-      el: '.characters-pagination',
+      el: '[data-swiper-pagination="characters-pagination"]',
       clickable: true,
     };
   }
