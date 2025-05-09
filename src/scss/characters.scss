@@ -78,6 +78,8 @@
     @include media(desktop) {
       display: flex;
       position: absolute;
+      align-items: center;
+      align-items: center;
       top: 50%;
       transform: translateY(-50%);
       z-index: 10;
@@ -85,27 +87,35 @@
       border: 2px solid #ab9f98;
       border-radius: 50%;
       padding: 10px;
+      margin: 0;
       width: 50px;
       height: 50px;
       color: #ab9f98;
       cursor: pointer;
       line-height: 1;
 
-      &:hover {
-        color: #8c6955;
-      }
-      &::after {
-        font-size: 20px;
-        color: #ab9f98;
-        line-height: 1;
-        display: block;
-        text-align: center;
-      }
       &[data-swiper-button-prev='characters-prev'] {
         left: 10px;
       }
       &[data-swiper-button-next='characters-next'] {
         right: 10px;
+      }
+
+      &::after {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+        color: #ab9f98;
+        line-height: 1;
+        width: 100%;
+        height: 100%;
+      }
+      &[data-swiper-button-prev='characters-prev']::after {
+        content: '<';
+      }
+      &[data-swiper-button-next='characters-next']::after {
+        content: '>';
       }
     }
   }
