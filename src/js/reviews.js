@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       loop: false,
       slidesPerView: 'auto',
       spaceBetween: 20,
-      allowTouchMove: true
+      allowTouchMove: true,
       watchOverflow: true,
       keyboard: {
         enabled: true,
