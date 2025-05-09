@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const options = {
     modules,
     slidesPerView: 1.32,
+    allowTouchMove: true,
     loop: true,
     spaceBetween: 16,
     breakpoints: {

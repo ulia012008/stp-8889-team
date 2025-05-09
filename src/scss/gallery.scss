@@ -74,19 +74,6 @@
             justify-content: center;
             position: relative;
             z-index: 10;
-
-            &::after {
-              font-size: 24px;
-              color: #ab9f98;
-              line-height: 1;
-              display: block;
-              text-align: center;
-            }
-
-            &:hover {
-              color: #8c6955;
-              border-color: #8c6955;
-            }
           }
 
           [data-swiper-button-prev]::after {
