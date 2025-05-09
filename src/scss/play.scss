@@ -73,10 +73,18 @@
   max-width: 100%;
   height: auto;
   margin-bottom: 16px;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: center;
 
   @include media(desktop) {
     margin-bottom: 24px;
     align-self: center;
+  }
+  &:hover {
+    transform: scale(1.09);
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.15));
+    z-index: 1;
   }
 }
 
