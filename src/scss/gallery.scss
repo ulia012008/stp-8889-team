@@ -29,6 +29,9 @@
         @include media(desktop) {
           margin-top: 40px;
         }
+        .swiper-wrapper {
+          transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
       }
       .gallery-list {
         @extend .swiper-wrapper;
@@ -39,6 +42,15 @@
       .gallery-item {
         @extend .swiper-slide;
         flex: 0 0 auto;
+        transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+          filter 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        transform-origin: center;
+
+        &:hover {
+          transform: scale(1.05);
+          filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+          z-index: 2;
+        }
       }
 
       .double-img {
